@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Valhalla Capital — Decisions{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h2 class="page-header__title">Decision Journal</h2>
+    <p class="page-header__desc">Investment reasoning — every thesis, every conviction, every pass</p>
+</div>
+
+{% if not is_owner %}
+<div class="empty-state">
+    <div class="empty-state__icon">◈</div>
+    <h3 class="empty-state__title">Authorized Access Only</h3>
+    <p class="empty-state__desc">
+        The decision journal contains proprietary investment reasoning and is not publicly available.
+    </p>
+    <p class="empty-state__desc">
+        For access or inquiries, contact
+        <a href="mailto:evangeline@valhallacapital.net" class="contact-link">evangeline@valhallacapital.net</a>
+    </p>
+</div>
+
+{% elif not db_available %}
+<div class="empty-state">
+    <div class="empty-state__icon">◈</div>
+    <h3 class="empty-state__title">Overseer DB not connected</h3>
+    <p class="empty-state__desc">
+        Connect to the overseer PostgreSQL to view Valkyrie's decision journal.
+        See the Valkyrie page for setup instructions.
+    </p>
+</div>
+
+{% else %}
+
+{# Ticker filter #}
+{% if ticker %}
+<div class="filters">
+    <span class="filters__label">Filtering:</span>
+    <span class="filters__tag filters__tag--active">{{ ticker }}</span>
+    <a href="/decisions" class="filters__clear">× clear</a>
+</div>
+{% endif %}
+
+{% if entries %}
+<div class="journal">
+    {% for entry in entries %}
+    <article class="journal-entry">
+        <div class="journal-entry__header">
+            <div class="journal-entry__meta">
+                <span class="journal-entry__timestamp">{{ format_timestamp(entry.get('created_at')) }}</span>
+                {% if entry.get('ticker') %}
+                <a href="/decisions?ticker={{ entry['ticker'] }}" class="journal-entry__ticker">{{ entry['ticker'] }}</a>
+                {% endif %}
+                {% if entry.get('action') %}
+                <span class="journal-entry__action journal-entry__action--{{ entry['action']|lower }}">
+                    {{ entry['action'] }}
+                </span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="journal-entry__body">
+            {{ entry.get('reasoning', entry.get('content', entry.get('summary', '(no content)'))) }}
+        </div>
+        {% if entry.get('conviction') %}
+        <div class="journal-entry__footer">
+            <span class="journal-entry__conviction">Conviction: {{ entry['conviction'] }}</span>
+            {% if entry.get('falsification_criteria') %}
+            <span class="journal-entry__falsification">Falsify: {{ entry['falsification_criteria'] }}</span>
+            {% endif %}
+        </div>
+        {% endif %}
+    </article>
+    {% endfor %}
+
+    {# Pagination #}
+    <div class="pagination">
+        {% if page > 1 %}
+        <a href="/decisions?page={{ page - 1 }}&per_page={{ per_page }}{% if ticker %}&ticker={{ ticker }}{% endif %}"
+           class="pagination__link">← Newer</a>
+        {% endif %}
+        <span class="pagination__info">Page {{ page }}</span>
+        {% if entries|length == per_page %}
+        <a href="/decisions?page={{ page + 1 }}&per_page={{ per_page }}{% if ticker %}&ticker={{ ticker }}{% endif %}"
+           class="pagination__link">Older →</a>
+        {% endif %}
+    </div>
+</div>
+
+{% else %}
+<div class="empty-state empty-state--inline">
+    <p class="empty-state__desc">No decision journal entries found{% if ticker %} for {{ ticker }}{% endif %}.</p>
+</div>
+{% endif %}
+
+{% endif %}
+
+{% endblock %}

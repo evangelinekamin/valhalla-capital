@@ -1,0 +1,14 @@
+{
+  "request_id": "60222a57-a6c4-4f28-a486-684225b03e78",
+  "timestamp": "2026-05-25T14:01:45.195816",
+  "ticker": "AENT",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -13.5,
+    "confidence": 0.85
+  },
+  "reasoning": "AENT position has breached its $5.95 stop-loss ($6.16 current price), triggering CODE RED protocol. The position is also a stub at only 1.9% of portfolio, below the 5% minimum meaningful size. No earnings date has been confirmed despite multiple checks, creating uncertainty for position management. With the portfolio in crisis (-12.53% alpha underperformance vs SPY), capital should be redeployed to higher-conviction opportunities. Selling AENT frees up $18.48 for redeployment to addresses the portfolio crisis.",
+  "quantity": 3.0
+}

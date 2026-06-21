@@ -1,0 +1,55 @@
+{% if logs %}
+<p class="results-meta">{{ total }} entries{% if cycle_type %} · filtered: {{ cycle_type }}{% endif %} · page {{ page }}/{{ total_pages }}</p>
+
+{% for log in logs %}
+<article class="log-entry">
+    <div class="log-entry__header">
+        <div class="log-entry__meta">
+            <span class="log-entry__timestamp">{{ format_timestamp(log.get('started_at')) }}</span>
+            {% if log.get('cycle_type') %}
+            <span class="log-entry__tag">{{ log['cycle_type'] }}</span>
+            {% endif %}
+        </div>
+        {% if is_owner and log.get('cost_cents') %}
+        <span class="log-entry__cost">${{ "%.2f"|format(log['cost_cents'] / 100) }}</span>
+        {% endif %}
+    </div>
+    {% if is_owner %}
+    <div class="log-entry__body log-entry__body--md log-entry__body--valkyrie">
+        {{ log.get('summary', log.get('content', log.get('output', '(no content)'))) | markdown }}
+    </div>
+    {% else %}
+    {% set full_text = log.get('summary', log.get('content', log.get('output', ''))) or '' %}
+    <div class="log-entry__body log-entry__body--excerpt">
+        {{ full_text[:100] }}{% if full_text|length > 100 %}...{% endif %}
+    </div>
+    {% endif %}
+</article>
+{% endfor %}
+
+{# Pagination #}
+{% if total_pages > 1 %}
+<div class="pagination">
+    {% if page > 1 %}
+    <a href="/valkyrie?page={{ page - 1 }}&per_page={{ per_page }}{% if cycle_type %}&cycle_type={{ cycle_type }}{% endif %}"
+       class="pagination__link">← Newer</a>
+    {% endif %}
+    <span class="pagination__info">{{ page }} / {{ total_pages }}</span>
+    {% if page < total_pages %}
+    <a href="/valkyrie?page={{ page + 1 }}&per_page={{ per_page }}{% if cycle_type %}&cycle_type={{ cycle_type }}{% endif %}"
+       class="pagination__link">Older →</a>
+    {% endif %}
+</div>
+{% endif %}
+
+{% else %}
+<div class="empty-state empty-state--inline">
+    <p class="empty-state__desc">
+        {% if cycle_type %}
+        No cycle logs found for type "{{ cycle_type }}".
+        {% else %}
+        No cycle logs found yet. Valkyrie will populate these as she runs.
+        {% endif %}
+    </p>
+</div>
+{% endif %}

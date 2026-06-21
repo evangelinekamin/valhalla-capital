@@ -1,0 +1,14 @@
+{
+  "request_id": "9bdd2480-70a4-43d0-af92-55a530e98e93",
+  "timestamp": "2026-05-28T14:02:58.852338",
+  "ticker": "DNA",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -2.0,
+    "confidence": 0.85
+  },
+  "reasoning": "DNA is a stub position at 4.5% of the portfolio, below the 5% minimum threshold. Stub positions below 5% do not justify monitoring cost and should be exited to free up capital for more promising opportunities. The portfolio needs optimization to address the -11.0% underperformance crisis.",
+  "quantity": 5.0
+}

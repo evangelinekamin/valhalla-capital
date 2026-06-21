@@ -1,0 +1,69 @@
+{
+  "llm": {
+    "model": "google/gemma-4-26b-a4b-it",
+    "max_tokens": 4096,
+    "temperature": 0.1,
+    "batch_size": 15,
+    "retry_attempts": 3,
+    "retry_delay_seconds": 2
+  },
+  "classifications": {
+    "CRITICAL": {
+      "description": "Immediate market-moving events requiring instant action",
+      "examples": [
+        "CEO resignation announcement",
+        "Earnings guidance revision",
+        "Major acquisition announcement",
+        "Regulatory investigation disclosure",
+        "Product recall notice"
+      ]
+    },
+    "IMPORTANT": {
+      "description": "Significant information that could impact trading decisions",
+      "examples": [
+        "Product launch announcement",
+        "Partnership announcement",
+        "Executive commentary on business performance",
+        "Industry trend analysis",
+        "Competitive positioning updates"
+      ]
+    },
+    "ROUTINE": {
+      "description": "General market commentary or information for awareness",
+      "examples": [
+        "General market observations",
+        "Opinion pieces on industry trends",
+        "Historical performance analysis",
+        "Educational content"
+      ]
+    },
+    "SKIP": {
+      "description": "Low value content not relevant for trading",
+      "examples": [
+        "Personal opinions unrelated to markets",
+        "Memes and jokes",
+        "Promotional content",
+        "Political commentary without market impact"
+      ]
+    }
+  },
+  "sentiment_definitions": {
+    "bullish": "Positive outlook, expecting price increase or positive developments",
+    "bearish": "Negative outlook, expecting price decrease or negative developments",
+    "neutral": "Balanced or informational without clear directional bias"
+  },
+  "extraction": {
+    "max_tickers_per_tweet": 10,
+    "require_dollar_sign": false,
+    "validate_tickers": false,
+    "ticker_patterns": [
+      "\\$[A-Z]{1,5}\\b",
+      "\\b[A-Z]{1,5}\\b(?=\\s|$|:)"
+    ]
+  },
+  "fallback": {
+    "on_parse_error": "ROUTINE",
+    "on_api_error": "ROUTINE",
+    "on_timeout": "ROUTINE"
+  }
+}

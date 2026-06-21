@@ -1,0 +1,15 @@
+{
+  "request_id": "0dad2540-ce5b-413d-aae5-a8a891198669",
+  "timestamp": "2026-05-27T14:02:51.899138",
+  "ticker": "BRCB",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 35.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.8
+  },
+  "reasoning": "BRCB has extraordinary insider buying of $73.3M by 3 insiders, indicating massive conviction in the company's growth prospects. This represents a rare opportunity with asymmetric risk/reward. The coffee bar franchise business appears to be at an inflection point for expansion.",
+  "quantity": 6.0,
+  "kelly_fraction": 0.32142857142857145
+}

@@ -1,0 +1,308 @@
+"""Multi-layer risk validation for trade safety."""
+from dataclasses import dataclass
+from enum import Enum
+from typing import List, Optional, Protocol
+
+import structlog
+
+from config.settings import Settings
+from src.utils.time_utils import is_market_open
+
+log = structlog.get_logger()
+
+
+class RiskCheckStatus(Enum):
+    """Result status of a risk check."""
+
+    APPROVED = "approved"
+    REJECTED = "rejected"
+    WARNING = "warning"
+
+
+@dataclass
+class RiskCheck:
+    """Individual risk check result."""
+
+    name: str
+    status: RiskCheckStatus
+    message: str
+    details: Optional[dict] = None
+
+
+class DatabaseProtocol(Protocol):
+    """Protocol for database adapter."""
+
+    def get_today_trade_count(self) -> int:
+        ...
+
+    def get_week_trade_count(self) -> int:
+        ...
+
+    def get_daily_pnl_percent(self) -> float:
+        ...
+
+    def get_recent_trade(self, ticker: str, minutes: int) -> Optional[dict]:
+        ...
+
+
+class IBKRProtocol(Protocol):
+    """Protocol for IBKR connection."""
+
+    def get_account_value(self, tag: str) -> float:
+        ...
+
+
+class RiskValidator:
+    """
+    Validates trades against comprehensive safety rules.
+
+    Implements 8 layers of risk checks:
+    1. Market hours
+    2. Daily trade limit
+    3. Weekly trade limit
+    4. Position size
+    5. Portfolio concentration
+    6. Daily loss limit
+    7. Duplicate trade prevention
+    8. Account balance
+    """
+
+    def __init__(
+        self,
+        db: DatabaseProtocol,
+        ib: IBKRProtocol,
+        settings: Settings | None = None,
+    ):
+        """
+        Initialize risk validator.
+
+        Args:
+            db: Database adapter for trade history
+            ib: IBKR connection for account values
+            settings: Application settings
+        """
+        self.db = db
+        self.ib = ib
+        self.settings = settings or Settings()
+        self.logger = log.bind(component="risk_validator")
+
+    def validate(
+        self, ticker: str, action: str, quantity: int, current_price: float
+    ) -> List[RiskCheck]:
+        """
+        Run all risk checks on a proposed trade.
+
+        Args:
+            ticker: Stock ticker
+            action: 'BUY' or 'SELL'
+            quantity: Number of shares
+            current_price: Current share price
+
+        Returns:
+            List of RiskCheck results
+        """
+        checks = [
+            self._check_market_hours(),
+            self._check_daily_trade_limit(),
+            self._check_weekly_trade_limit(),
+            self._check_position_size(action, quantity, current_price),
+            self._check_portfolio_concentration(ticker, quantity, current_price),
+            self._check_daily_loss_limit(),
+            self._check_duplicate_trade(ticker, action),
+            self._check_account_balance(action, quantity, current_price),
+        ]
+
+        approved = sum(1 for c in checks if c.status == RiskCheckStatus.APPROVED)
+        rejected = sum(1 for c in checks if c.status == RiskCheckStatus.REJECTED)
+
+        self.logger.info(
+            "risk_validation_complete",
+            ticker=ticker,
+            action=action,
+            checks_approved=approved,
+            checks_rejected=rejected,
+            checks_total=len(checks),
+        )
+
+        return checks
+
+    def is_approved(self, checks: List[RiskCheck]) -> bool:
+        """
+        Determine if trade should proceed based on checks.
+
+        Returns:
+            True if no REJECTED checks found
+        """
+        return all(c.status != RiskCheckStatus.REJECTED for c in checks)
+
+    def _check_market_hours(self) -> RiskCheck:
+        """Verify trading during market hours."""
+        is_open, message = is_market_open()
+
+        return RiskCheck(
+            name="market_hours",
+            status=RiskCheckStatus.APPROVED if is_open else RiskCheckStatus.REJECTED,
+            message=message,
+        )
+
+    def _check_daily_trade_limit(self) -> RiskCheck:
+        """Check if daily trade limit exceeded."""
+        today_trades = self.db.get_today_trade_count()
+        limit = self.settings.max_trades_per_day
+
+        if today_trades >= limit:
+            return RiskCheck(
+                name="daily_trade_limit",
+                status=RiskCheckStatus.REJECTED,
+                message=f"Daily trade limit reached ({today_trades}/{limit})",
+            )
+
+        if today_trades >= limit * 0.8:
+            return RiskCheck(
+                name="daily_trade_limit",
+                status=RiskCheckStatus.WARNING,
+                message=f"Approaching daily limit ({today_trades}/{limit})",
+            )
+
+        return RiskCheck(
+            name="daily_trade_limit",
+            status=RiskCheckStatus.APPROVED,
+            message=f"Daily trades: {today_trades}/{limit}",
+        )
+
+    def _check_weekly_trade_limit(self) -> RiskCheck:
+        """Check if weekly trade limit exceeded."""
+        week_trades = self.db.get_week_trade_count()
+        limit = self.settings.max_trades_per_week
+
+        if week_trades >= limit:
+            return RiskCheck(
+                name="weekly_trade_limit",
+                status=RiskCheckStatus.REJECTED,
+                message=f"Weekly trade limit reached ({week_trades}/{limit})",
+            )
+
+        return RiskCheck(
+            name="weekly_trade_limit",
+            status=RiskCheckStatus.APPROVED,
+            message=f"Weekly trades: {week_trades}/{limit}",
+        )
+
+    def _check_position_size(self, action: str, quantity: int, price: float) -> RiskCheck:
+        """Verify position size within limits.
+
+        Sells reduce position size, so the post-trade concentration is always
+        lower than before. This check only applies to buys.
+        """
+        if action.upper() == "SELL":
+            return RiskCheck(
+                name="position_size",
+                status=RiskCheckStatus.APPROVED,
+                message="Position size check skipped (sell reduces concentration)",
+            )
+
+        portfolio_value = self.ib.get_account_value("NetLiquidation")
+        position_value = quantity * price
+        position_pct = position_value / portfolio_value if portfolio_value > 0 else 0
+
+        max_pct = self.settings.max_position_fraction
+
+        if position_pct > max_pct:
+            return RiskCheck(
+                name="position_size",
+                status=RiskCheckStatus.REJECTED,
+                message=f"Position {position_pct:.1%} exceeds max {max_pct:.1%}",
+                details={
+                    "position_value": position_value,
+                    "portfolio_value": portfolio_value,
+                    "position_pct": position_pct,
+                },
+            )
+
+        return RiskCheck(
+            name="position_size",
+            status=RiskCheckStatus.APPROVED,
+            message=f"Position size {position_pct:.1%} within limits",
+        )
+
+    def _check_portfolio_concentration(
+        self, ticker: str, quantity: int, price: float
+    ) -> RiskCheck:
+        """
+        Check sector/industry concentration limits.
+
+        Note: This is a placeholder implementation. Full implementation
+        would require sector mapping data.
+        """
+        # TODO: Implement full concentration check with sector data
+        return RiskCheck(
+            name="portfolio_concentration",
+            status=RiskCheckStatus.APPROVED,
+            message="Concentration check passed",
+        )
+
+    def _check_daily_loss_limit(self) -> RiskCheck:
+        """Check if daily loss limit exceeded."""
+        daily_pnl_pct = self.db.get_daily_pnl_percent()
+        limit = -self.settings.max_daily_loss_pct  # Negative limit
+
+        if daily_pnl_pct < limit:
+            return RiskCheck(
+                name="daily_loss_limit",
+                status=RiskCheckStatus.REJECTED,
+                message=f"Daily loss {daily_pnl_pct:.2%} exceeds limit {limit:.2%}",
+            )
+
+        return RiskCheck(
+            name="daily_loss_limit",
+            status=RiskCheckStatus.APPROVED,
+            message=f"Daily P&L: {daily_pnl_pct:.2%}",
+        )
+
+    def _check_duplicate_trade(self, ticker: str, action: str) -> RiskCheck:
+        """Prevent duplicate trades within short timeframe."""
+        recent_trade = self.db.get_recent_trade(ticker, minutes=30)
+
+        if recent_trade and recent_trade.get("action") == action:
+            return RiskCheck(
+                name="duplicate_trade",
+                status=RiskCheckStatus.WARNING,
+                message=f"Similar trade executed {recent_trade['minutes_ago']} minutes ago",
+            )
+
+        return RiskCheck(
+            name="duplicate_trade",
+            status=RiskCheckStatus.APPROVED,
+            message="No recent duplicate trades",
+        )
+
+    def _check_account_balance(self, action: str, quantity: int, price: float) -> RiskCheck:
+        """Verify sufficient buying power.
+
+        Sells add cash to the account rather than consuming it, so the
+        buying-power check only applies to buys. Prior to this fix the check
+        was run unconditionally and silently rejected every sell once cash
+        dropped below the sold-position's notional.
+        """
+        if action.upper() == "SELL":
+            return RiskCheck(
+                name="account_balance",
+                status=RiskCheckStatus.APPROVED,
+                message="Account balance check skipped (sell generates cash)",
+            )
+
+        required_cash = quantity * price * 1.05  # 5% buffer for fees
+        available_cash = self.ib.get_account_value("TotalCashValue")
+
+        if available_cash < required_cash:
+            return RiskCheck(
+                name="account_balance",
+                status=RiskCheckStatus.REJECTED,
+                message=f"Insufficient funds (need ${required_cash:,.2f}, have ${available_cash:,.2f})",
+            )
+
+        return RiskCheck(
+            name="account_balance",
+            status=RiskCheckStatus.APPROVED,
+            message=f"Sufficient funds (${available_cash:,.2f} available)",
+        )

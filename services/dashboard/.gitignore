@@ -1,0 +1,23 @@
+# Environment and secrets
+.env
+.ssh/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+*.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Session logs
+cascade-session-*.md
+
+# OS
+.DS_Store
+Thumbs.db

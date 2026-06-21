@@ -1,0 +1,14 @@
+{
+  "request_id": "414cd984-ecb4-46f5-a584-38b6ffb2d1b3",
+  "timestamp": "2026-05-01T14:01:01.821237",
+  "ticker": "CHH",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.95,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -5.0,
+    "confidence": 0.95
+  },
+  "reasoning": "CHH thesis is broken due to Q1 earnings miss (EPS $0.44 vs expected). The position has -2.74% unrealized loss and 'NONE' conviction level in active theses. I would not buy CHH today at current price of $102.08, so holding is not justified. This is a clear application of sell discipline - the thesis has been invalidated by evidence.",
+  "quantity": 1.0
+}

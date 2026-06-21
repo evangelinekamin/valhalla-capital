@@ -1,0 +1,15 @@
+{
+  "request_id": "81d52503-9607-4013-9f84-cdf8d321a866",
+  "timestamp": "2026-05-14T14:02:09.593551",
+  "ticker": "DMLP",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.8
+  },
+  "reasoning": "DMLP has performed well (+3.7%) and benefits directly from the oil crisis. With Aramco warning of critically low fuel stocks and 100M barrels lost weekly from Hormuz closure, DMLP's energy transportation thesis is strongly supported. This deployment addresses the cash drag and underperformance.",
+  "quantity": 4.0,
+  "kelly_fraction": 0.325
+}

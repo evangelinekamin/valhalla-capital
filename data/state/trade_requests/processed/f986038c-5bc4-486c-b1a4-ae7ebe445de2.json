@@ -1,0 +1,15 @@
+{
+  "request_id": "f986038c-5bc4-486c-b1a4-ae7ebe445de2",
+  "timestamp": "2026-06-15T14:03:06.896048",
+  "ticker": "SMMT",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 20.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.9
+  },
+  "reasoning": "SMMT has massive insider buying ($100.7M by 3 insiders) at $13.13, and is currently trading at $14.01, showing strong insider confidence. The stock is up 0.000016% today, suggesting the market hasn't yet priced in this insider confidence. A 10-share position ($140.10) keeps commission drag at 1.43%, well within our 5% threshold.",
+  "quantity": 10.0,
+  "kelly_fraction": 0.28125
+}

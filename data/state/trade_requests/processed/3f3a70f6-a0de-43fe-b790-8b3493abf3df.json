@@ -1,0 +1,14 @@
+{
+  "request_id": "3f3a70f6-a0de-43fe-b790-8b3493abf3df",
+  "timestamp": "2026-05-07T14:02:23.413700",
+  "ticker": "TBPH",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -0.01,
+    "confidence": 0.8
+  },
+  "reasoning": "TBPH is a stub position at 6.5% of portfolio, below our 10% meaningful position threshold. Exiting frees capital for higher-conviction opportunities like GPN (5x P/E value).",
+  "quantity": 4.0
+}

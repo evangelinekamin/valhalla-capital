@@ -1,0 +1,15 @@
+{
+  "request_id": "f51d60e0-3c36-4542-acec-7d39e7dc2669",
+  "timestamp": "2026-05-18T14:03:34.217454",
+  "ticker": "POOL",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 15.0,
+    "expected_loss_pct": -8.0,
+    "confidence": 0.9
+  },
+  "reasoning": "POOL is a resilient consumer discretionary company in the pool products sector. Q1 2026 revenue $1.14B, net income $53.2M (EPS $1.46). The company has strong insider support with $7.67M in insider buying, indicating management confidence in the business. Trading at a reasonable valuation, this represents a quality value opportunity.",
+  "quantity": 1.0,
+  "kelly_fraction": 0.385
+}

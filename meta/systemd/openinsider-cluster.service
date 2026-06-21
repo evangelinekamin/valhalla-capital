@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenInsider cluster buys scraper (Phase 1)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=scraper
+Group=scraper
+WorkingDirectory=/opt/valhalla/services/openinsider/openinsider-fetch-process
+ExecStart=/opt/valhalla/services/openinsider/openinsider-fetch-process/venv/bin/python run_scraper.py
+EnvironmentFile=/opt/valhalla/services/openinsider/openinsider-fetch-process/.env
+StandardOutput=journal
+StandardError=journal
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/valhalla/services/openinsider/openinsider-fetch-process/data /opt/valhalla/services/openinsider/openinsider-fetch-process/logs
+PrivateTmp=true

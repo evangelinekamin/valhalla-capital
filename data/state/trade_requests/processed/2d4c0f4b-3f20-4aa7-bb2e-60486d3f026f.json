@@ -1,0 +1,15 @@
+{
+  "request_id": "2d4c0f4b-3f20-4aa7-bb2e-60486d3f026f",
+  "timestamp": "2026-05-26T14:02:35.604590",
+  "ticker": "BRCB",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.8,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.85
+  },
+  "reasoning": "BRCB shows strong fundamentals with $55.5M Q1 2026 revenue and improving profitability. The massive insider buying ($73.3M by 3 insiders) indicates exceptional institutional conviction. This provides diversification away from energy exposure and represents a high-conviction opportunity that fits within available capital constraints.",
+  "quantity": 25.0,
+  "kelly_fraction": 0.36
+}

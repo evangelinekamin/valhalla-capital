@@ -1,0 +1,14 @@
+{
+  "request_id": "d8d4bd0f-dd5c-466c-964c-ffb919c24c81",
+  "timestamp": "2026-05-19T14:02:04.107098",
+  "ticker": "BUR",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -20.0,
+    "confidence": 0.75
+  },
+  "reasoning": "BUR is the largest position in the portfolio at 14.5% weight and has underperformed (-8.9%). Trimming this position reduces concentration risk and improves portfolio allocation. The current valuation doesn't justify the large position size given the underperformance and fundamental concerns.",
+  "quantity": 16.0
+}

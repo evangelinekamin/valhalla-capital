@@ -1,0 +1,14 @@
+{
+  "request_id": "9c3f97cb-ec1c-4bb0-a035-ceadfeca67be",
+  "timestamp": "2026-06-11T14:01:28.742411",
+  "ticker": "GPN",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -20.0,
+    "confidence": 0.8
+  },
+  "reasoning": "GPN's Q1 2026 results show catastrophic net income of -$1.8B despite $2.97B revenue, indicating serious accounting or operational issues that invalidate the original thesis. This fundamental deterioration makes the position unacceptable to hold, failing the 'would I buy today' test at current price ($62.65).",
+  "quantity": 2.0
+}

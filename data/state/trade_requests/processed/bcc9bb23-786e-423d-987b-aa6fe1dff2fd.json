@@ -1,0 +1,14 @@
+{
+  "request_id": "bcc9bb23-786e-423d-987b-aa6fe1dff2fd",
+  "timestamp": "2026-06-11T14:02:24.330176",
+  "ticker": "BUR",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.85
+  },
+  "reasoning": "BUR's financials show consistent deterioration with negative operating income (-$53.7M) and net losses in recent quarters. Q4 2025 results show -$53.7M operating income and -$37.5M net income, indicating fundamental issues beyond market sentiment. The original thesis about strong risk-adjusted returns is invalidated by this financial data.",
+  "quantity": 32.0
+}

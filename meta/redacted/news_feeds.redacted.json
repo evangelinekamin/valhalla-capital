@@ -1,0 +1,68 @@
+{
+  "anthropic_api_key": "REDACTED",
+  "discord_webhook_url": "<REDACTED_DISCORD_WEBHOOK>",
+  "feeds": [
+    {
+      "name": "Reuters",
+      "url": "https://news.google.com/rss/search?q=site:reuters.com&hl=en-US",
+      "priority": 2,
+      "enabled": true
+    },
+    {
+      "name": "CNBC",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+      "priority": 2
+    },
+    {
+      "name": "Yahoo News - Finance",
+      "url": "https://news.yahoo.com/rss/finance",
+      "priority": 2,
+      "enabled": true
+    },
+    {
+      "name": "Bloomberg",
+      "url": "https://feeds.bloomberg.com/markets/news.rss",
+      "priority": 1,
+      "enabled": true
+    },
+    {
+      "name": "BBC",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml",
+      "priority": 3,
+      "enabled": true
+    },
+    {
+      "name": "WSJ",
+      "url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness",
+      "priority": 2,
+      "enabled": true
+    },
+    {
+      "name": "FT",
+      "url": "https://www.ft.com/rss/home/international",
+      "priority": 1,
+      "enabled": true
+    }
+  ],
+  "market_hours": {
+    "timezone": "America/New_York",
+    "trading_days": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "start_time": "09:30",
+    "end_time": "16:00",
+    "check_interval_market": 5,
+    "check_interval_off_market": 30
+  },
+  "deduplication": {
+    "enabled": true,
+    "lookback_hours": 24,
+    "similarity_threshold": 0.85
+  },
+  "max_articles_per_feed": 10,
+  "feed_fetch_timeout": 15
+}

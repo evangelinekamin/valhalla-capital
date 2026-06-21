@@ -1,0 +1,15 @@
+{
+  "request_id": "244b94fa-0b93-45a3-accd-58bd8c4ca77c",
+  "timestamp": "2026-05-14T14:02:45.866321",
+  "ticker": "BUR",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 15.0,
+    "expected_loss_pct": -7.0,
+    "confidence": 0.75
+  },
+  "reasoning": "BUR has performed well (+1.35%) and operates in the litigation finance space, which benefits from market volatility and uncertainty. Adding to this position diversifies the portfolio and addresses the cash drag.",
+  "quantity": 15.0,
+  "kelly_fraction": 0.27999999999999997
+}

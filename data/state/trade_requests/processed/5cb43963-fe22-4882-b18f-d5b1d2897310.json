@@ -1,0 +1,14 @@
+{
+  "request_id": "5cb43963-fe22-4882-b18f-d5b1d2897310",
+  "timestamp": "2026-06-02T14:02:56.137242",
+  "ticker": "ROCK",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 5.0,
+    "expected_loss_pct": -20.0,
+    "confidence": 0.7
+  },
+  "reasoning": "ROCK has declined -4.1% from entry price ($39.81 to $38.16) and the Substack $100 target remains valid but distant. With 6 positions lacking formal theses and critical cash constraints, selling 1 share (50% of position) will generate $38.16 in cash, increasing portfolio cash to ~11.0% and addressing the discipline violation. This is a tactical cash generation move, not thesis invalidation, as the $100 target remains intact.",
+  "quantity": 1.0
+}

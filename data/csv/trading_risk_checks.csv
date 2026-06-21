@@ -1,0 +1,777 @@
+id,trade_id,check_name,result,message,details,timestamp
+1,1,market_hours,APPROVED,Market is open,null,2026-02-19 18:51:17.08507+00
+2,1,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-02-19 18:51:17.085074+00
+3,1,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-02-19 18:51:17.085078+00
+4,1,position_size,APPROVED,Position size 6.6% within limits,null,2026-02-19 18:51:17.085079+00
+5,1,portfolio_concentration,APPROVED,Concentration check passed,null,2026-02-19 18:51:17.08508+00
+6,1,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-02-19 18:51:17.085081+00
+7,1,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-02-19 18:51:17.085083+00
+8,1,account_balance,APPROVED,Sufficient funds ($500.00 available),null,2026-02-19 18:51:17.085084+00
+9,2,market_hours,APPROVED,Market is open,null,2026-02-19 18:51:21.456982+00
+10,2,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-02-19 18:51:21.456984+00
+11,2,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-02-19 18:51:21.456985+00
+12,2,position_size,APPROVED,Position size 11.8% within limits,null,2026-02-19 18:51:21.456986+00
+13,2,portfolio_concentration,APPROVED,Concentration check passed,null,2026-02-19 18:51:21.456986+00
+14,2,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-02-19 18:51:21.456987+00
+15,2,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-02-19 18:51:21.456987+00
+16,2,account_balance,APPROVED,Sufficient funds ($466.50 available),null,2026-02-19 18:51:21.456988+00
+17,3,market_hours,APPROVED,Market is open,null,2026-02-19 19:14:37.245925+00
+18,3,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-02-19 19:14:37.245928+00
+19,3,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-02-19 19:14:37.24593+00
+20,3,position_size,APPROVED,Position size 18.5% within limits,null,2026-02-19 19:14:37.245931+00
+21,3,portfolio_concentration,APPROVED,Concentration check passed,null,2026-02-19 19:14:37.245932+00
+22,3,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-02-19 19:14:37.245932+00
+23,3,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-02-19 19:14:37.245933+00
+24,3,account_balance,APPROVED,Sufficient funds ($406.83 available),null,2026-02-19 19:14:37.245934+00
+25,4,market_hours,APPROVED,Market is open,null,2026-02-19 19:17:32.272265+00
+26,4,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-02-19 19:17:32.272267+00
+27,4,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-02-19 19:17:32.27227+00
+28,4,position_size,APPROVED,Position size 18.5% within limits,null,2026-02-19 19:17:32.272271+00
+29,4,portfolio_concentration,APPROVED,Concentration check passed,null,2026-02-19 19:17:32.272272+00
+30,4,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-02-19 19:17:32.272272+00
+31,4,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-02-19 19:17:32.272273+00
+32,4,account_balance,APPROVED,Sufficient funds ($406.83 available),null,2026-02-19 19:17:32.272274+00
+33,5,market_hours,APPROVED,Market is open,null,2026-02-20 20:02:54.155832+00
+34,5,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-02-20 20:02:54.155835+00
+35,5,weekly_trade_limit,APPROVED,Weekly trades: 1/30,null,2026-02-20 20:02:54.155838+00
+36,5,position_size,APPROVED,Position size 17.5% within limits,null,2026-02-20 20:02:54.155839+00
+37,5,portfolio_concentration,APPROVED,Concentration check passed,null,2026-02-20 20:02:54.155839+00
+38,5,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-02-20 20:02:54.15584+00
+39,5,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-02-20 20:02:54.15584+00
+40,5,account_balance,APPROVED,Sufficient funds ($202.86 available),null,2026-02-20 20:02:54.155842+00
+41,6,market_hours,APPROVED,Market is open,null,2026-03-12 17:29:06.073236+00
+42,6,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-03-12 17:29:06.073238+00
+43,6,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-03-12 17:29:06.073241+00
+44,6,position_size,APPROVED,Position size 9.6% within limits,null,2026-03-12 17:29:06.073242+00
+45,6,portfolio_concentration,APPROVED,Concentration check passed,null,2026-03-12 17:29:06.073242+00
+46,6,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-03-12 17:29:06.073243+00
+47,6,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-03-12 17:29:06.073244+00
+48,6,account_balance,APPROVED,Sufficient funds ($114.87 available),null,2026-03-12 17:29:06.073245+00
+49,7,market_hours,APPROVED,Market is open,null,2026-03-17 14:02:15.246664+00
+50,7,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-03-17 14:02:15.246667+00
+51,7,weekly_trade_limit,APPROVED,Weekly trades: 1/30,null,2026-03-17 14:02:15.24667+00
+52,7,position_size,APPROVED,Position size 17.8% within limits,null,2026-03-17 14:02:15.246671+00
+53,7,portfolio_concentration,APPROVED,Concentration check passed,null,2026-03-17 14:02:15.246671+00
+54,7,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-03-17 14:02:15.246672+00
+55,7,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-03-17 14:02:15.246673+00
+56,7,account_balance,APPROVED,Sufficient funds ($163.48 available),null,2026-03-17 14:02:15.246674+00
+57,8,market_hours,APPROVED,Market is open,null,2026-03-25 14:01:47.51816+00
+58,8,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-03-25 14:01:47.518163+00
+59,8,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-03-25 14:01:47.518166+00
+60,8,position_size,APPROVED,Position size 8.3% within limits,null,2026-03-25 14:01:47.518167+00
+61,8,portfolio_concentration,APPROVED,Concentration check passed,null,2026-03-25 14:01:47.518167+00
+62,8,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-03-25 14:01:47.518168+00
+63,8,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-03-25 14:01:47.518169+00
+64,8,account_balance,APPROVED,Sufficient funds ($280.67 available),null,2026-03-25 14:01:47.51817+00
+65,9,market_hours,APPROVED,Market is open,null,2026-04-06 14:01:15.973269+00
+66,9,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-06 14:01:15.973272+00
+67,9,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-04-06 14:01:15.973275+00
+68,9,position_size,APPROVED,Position size 10.3% within limits,null,2026-04-06 14:01:15.973276+00
+69,9,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-06 14:01:15.973276+00
+70,9,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-06 14:01:15.973277+00
+71,9,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-06 14:01:15.973278+00
+72,9,account_balance,APPROVED,Sufficient funds ($510.67 available),null,2026-04-06 14:01:15.973279+00
+73,10,market_hours,APPROVED,Market is open,null,2026-04-14 14:01:16.40137+00
+74,10,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-14 14:01:16.401372+00
+75,10,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-04-14 14:01:16.401375+00
+76,10,position_size,APPROVED,Position size 17.3% within limits,null,2026-04-14 14:01:16.401376+00
+77,10,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-14 14:01:16.401376+00
+78,10,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-14 14:01:16.401377+00
+79,10,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-14 14:01:16.401378+00
+80,10,account_balance,APPROVED,Sufficient funds ($405.71 available),null,2026-04-14 14:01:16.401379+00
+81,11,market_hours,APPROVED,Market is open,null,2026-04-15 14:01:00.02273+00
+82,11,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-15 14:01:00.022732+00
+83,11,weekly_trade_limit,APPROVED,Weekly trades: 1/30,null,2026-04-15 14:01:00.022735+00
+84,11,position_size,APPROVED,Position size 2.7% within limits,null,2026-04-15 14:01:00.022736+00
+85,11,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-15 14:01:00.022736+00
+86,11,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-15 14:01:00.022737+00
+87,11,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-15 14:01:00.022738+00
+88,11,account_balance,APPROVED,Sufficient funds ($220.63 available),null,2026-04-15 14:01:00.022739+00
+89,12,market_hours,APPROVED,Market is open,null,2026-04-16 14:02:05.606323+00
+90,12,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-16 14:02:05.606326+00
+91,12,weekly_trade_limit,APPROVED,Weekly trades: 2/30,null,2026-04-16 14:02:05.606326+00
+92,12,position_size,APPROVED,Position size 14.9% within limits,null,2026-04-16 14:02:05.606327+00
+93,12,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-16 14:02:05.606328+00
+94,12,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-16 14:02:05.606328+00
+95,12,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-16 14:02:05.606329+00
+96,12,account_balance,APPROVED,Sufficient funds ($247.44 available),null,2026-04-16 14:02:05.606329+00
+97,13,market_hours,APPROVED,Market is open,null,2026-04-17 14:03:56.348327+00
+98,13,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-17 14:03:56.348329+00
+99,13,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-04-17 14:03:56.34833+00
+100,13,position_size,APPROVED,Position size 7.6% within limits,null,2026-04-17 14:03:56.348331+00
+101,13,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-17 14:03:56.348331+00
+102,13,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-17 14:03:56.348332+00
+103,13,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-17 14:03:56.348332+00
+104,13,account_balance,APPROVED,Sufficient funds ($92.60 available),null,2026-04-17 14:03:56.348333+00
+105,14,market_hours,APPROVED,Market is open,null,2026-04-23 14:01:23.085304+00
+106,14,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-23 14:01:23.085307+00
+107,14,weekly_trade_limit,APPROVED,Weekly trades: 2/30,null,2026-04-23 14:01:23.08531+00
+108,14,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-04-23 14:01:23.085311+00
+109,14,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-23 14:01:23.085311+00
+110,14,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-23 14:01:23.085312+00
+111,14,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-23 14:01:23.085312+00
+112,14,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-04-23 14:01:23.085313+00
+113,15,market_hours,APPROVED,Market is open,null,2026-04-23 14:01:38.249177+00
+114,15,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-04-23 14:01:38.249179+00
+115,15,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-04-23 14:01:38.24918+00
+116,15,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-04-23 14:01:38.24918+00
+117,15,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-23 14:01:38.249181+00
+118,15,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-23 14:01:38.249181+00
+119,15,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-23 14:01:38.249182+00
+120,15,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-04-23 14:01:38.249182+00
+121,16,market_hours,APPROVED,Market is open,null,2026-04-23 14:01:51.818996+00
+122,16,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-04-23 14:01:51.819143+00
+123,16,weekly_trade_limit,APPROVED,Weekly trades: 4/30,null,2026-04-23 14:01:51.819145+00
+124,16,position_size,APPROVED,Position size 12.2% within limits,null,2026-04-23 14:01:51.819145+00
+125,16,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-23 14:01:51.819146+00
+126,16,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-23 14:01:51.819147+00
+127,16,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-23 14:01:51.819147+00
+128,16,account_balance,APPROVED,Sufficient funds ($185.80 available),null,2026-04-23 14:01:51.819148+00
+129,17,market_hours,APPROVED,Market is open,null,2026-04-29 14:01:04.76507+00
+130,17,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-29 14:01:04.765072+00
+131,17,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-04-29 14:01:04.765073+00
+132,17,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-04-29 14:01:04.765073+00
+133,17,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-29 14:01:04.765074+00
+134,17,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-29 14:01:04.765074+00
+135,17,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-29 14:01:04.765075+00
+136,17,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-04-29 14:01:04.765075+00
+137,18,market_hours,APPROVED,Market is open,null,2026-04-29 14:01:24.361007+00
+138,18,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-04-29 14:01:24.36101+00
+139,18,weekly_trade_limit,APPROVED,Weekly trades: 4/30,null,2026-04-29 14:01:24.36101+00
+140,18,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-04-29 14:01:24.361011+00
+141,18,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-29 14:01:24.361011+00
+142,18,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-29 14:01:24.361012+00
+143,18,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-29 14:01:24.361013+00
+144,18,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-04-29 14:01:24.361013+00
+145,19,market_hours,APPROVED,Market is open,null,2026-04-30 14:01:48.481287+00
+146,19,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-04-30 14:01:48.481289+00
+147,19,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-04-30 14:01:48.48129+00
+148,19,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-04-30 14:01:48.48129+00
+149,19,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-30 14:01:48.481291+00
+150,19,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-30 14:01:48.481291+00
+151,19,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-30 14:01:48.481292+00
+152,19,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-04-30 14:01:48.481292+00
+153,20,market_hours,APPROVED,Market is open,null,2026-04-30 14:02:06.475179+00
+154,20,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-04-30 14:02:06.475182+00
+155,20,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-04-30 14:02:06.475182+00
+156,20,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-04-30 14:02:06.475183+00
+157,20,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-30 14:02:06.475183+00
+158,20,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-30 14:02:06.475184+00
+159,20,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-30 14:02:06.475184+00
+160,20,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-04-30 14:02:06.475185+00
+161,21,market_hours,APPROVED,Market is open,null,2026-04-30 14:02:25.321283+00
+162,21,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-04-30 14:02:25.321285+00
+163,21,weekly_trade_limit,APPROVED,Weekly trades: 4/30,null,2026-04-30 14:02:25.321286+00
+164,21,position_size,APPROVED,Position size 12.0% within limits,null,2026-04-30 14:02:25.321286+00
+165,21,portfolio_concentration,APPROVED,Concentration check passed,null,2026-04-30 14:02:25.321287+00
+166,21,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-04-30 14:02:25.321287+00
+167,21,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-04-30 14:02:25.321288+00
+168,21,account_balance,APPROVED,Sufficient funds ($417.19 available),null,2026-04-30 14:02:25.321288+00
+169,22,market_hours,APPROVED,Market is open,null,2026-05-01 14:01:06.889924+00
+170,22,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-01 14:01:06.889933+00
+171,22,weekly_trade_limit,APPROVED,Weekly trades: 0/30,null,2026-05-01 14:01:06.889946+00
+172,22,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-01 14:01:06.889949+00
+173,22,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-01 14:01:06.88995+00
+174,22,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-01 14:01:06.889952+00
+175,22,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-01 14:01:06.889954+00
+176,22,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-01 14:01:06.88996+00
+177,23,market_hours,APPROVED,Market is open,null,2026-05-01 14:01:26.818372+00
+178,23,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-01 14:01:26.818383+00
+179,23,weekly_trade_limit,APPROVED,Weekly trades: 1/30,null,2026-05-01 14:01:26.818386+00
+180,23,position_size,APPROVED,Position size 11.7% within limits,null,2026-05-01 14:01:26.818388+00
+181,23,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-01 14:01:26.81839+00
+182,23,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-01 14:01:26.818392+00
+183,23,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-01 14:01:26.818394+00
+184,23,account_balance,APPROVED,Sufficient funds ($398.02 available),null,2026-05-01 14:01:26.818396+00
+185,24,market_hours,APPROVED,Market is open,null,2026-05-01 14:01:45.806403+00
+186,24,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-01 14:01:45.806413+00
+187,24,weekly_trade_limit,APPROVED,Weekly trades: 2/30,null,2026-05-01 14:01:45.806416+00
+188,24,position_size,APPROVED,Position size 13.1% within limits,null,2026-05-01 14:01:45.806418+00
+189,24,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-01 14:01:45.80642+00
+190,24,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-01 14:01:45.806422+00
+191,24,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-01 14:01:45.806424+00
+192,24,account_balance,APPROVED,Sufficient funds ($275.19 available),null,2026-05-01 14:01:45.806426+00
+193,25,market_hours,APPROVED,Market is open,null,2026-05-07 14:02:03.463611+00
+194,25,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-07 14:02:03.46362+00
+195,25,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-05-07 14:02:03.46363+00
+196,25,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-07 14:02:03.463633+00
+197,25,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-07 14:02:03.463635+00
+198,25,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-07 14:02:03.463637+00
+199,25,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-07 14:02:03.46364+00
+200,25,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-07 14:02:03.463644+00
+201,26,market_hours,APPROVED,Market is open,null,2026-05-07 14:02:28.475761+00
+202,26,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-07 14:02:28.475768+00
+203,26,weekly_trade_limit,APPROVED,Weekly trades: 4/30,null,2026-05-07 14:02:28.475769+00
+204,26,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-07 14:02:28.475771+00
+205,26,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-07 14:02:28.475773+00
+206,26,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-07 14:02:28.475774+00
+207,26,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-07 14:02:28.475775+00
+208,26,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-07 14:02:28.475776+00
+209,27,market_hours,APPROVED,Market is open,null,2026-05-08 14:02:26.563548+00
+210,27,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-08 14:02:26.563557+00
+211,27,weekly_trade_limit,APPROVED,Weekly trades: 2/30,null,2026-05-08 14:02:26.563559+00
+212,27,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-08 14:02:26.56356+00
+213,27,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-08 14:02:26.563562+00
+214,27,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-08 14:02:26.563563+00
+215,27,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-08 14:02:26.563564+00
+216,27,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-08 14:02:26.563566+00
+217,28,market_hours,APPROVED,Market is open,null,2026-05-08 14:02:35.821068+00
+218,28,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-08 14:02:35.82108+00
+219,28,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-05-08 14:02:35.821083+00
+220,28,position_size,APPROVED,Position size 6.8% within limits,null,2026-05-08 14:02:35.821086+00
+221,28,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-08 14:02:35.821089+00
+222,28,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-08 14:02:35.821091+00
+223,28,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-08 14:02:35.821094+00
+224,28,account_balance,APPROVED,Sufficient funds ($517.58 available),null,2026-05-08 14:02:35.821097+00
+225,29,market_hours,APPROVED,Market is open,null,2026-05-13 14:03:25.157161+00
+226,29,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-13 14:03:25.157173+00
+227,29,weekly_trade_limit,APPROVED,Weekly trades: 4/30,null,2026-05-13 14:03:25.157175+00
+228,29,position_size,APPROVED,Position size 13.5% within limits,null,2026-05-13 14:03:25.157177+00
+229,29,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-13 14:03:25.157179+00
+230,29,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-13 14:03:25.157181+00
+231,29,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-13 14:03:25.157183+00
+232,29,account_balance,APPROVED,Sufficient funds ($447.95 available),null,2026-05-13 14:03:25.157185+00
+233,30,market_hours,APPROVED,Market is open,null,2026-05-13 14:03:40.532405+00
+234,30,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-13 14:03:40.532418+00
+235,30,weekly_trade_limit,APPROVED,Weekly trades: 5/30,null,2026-05-13 14:03:40.532423+00
+236,30,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-13 14:03:40.532426+00
+237,30,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-13 14:03:40.53243+00
+238,30,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-13 14:03:40.532433+00
+239,30,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-13 14:03:40.532437+00
+240,30,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-13 14:03:40.53244+00
+241,31,market_hours,APPROVED,Market is open,null,2026-05-14 14:01:40.785986+00
+242,31,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-14 14:01:40.785995+00
+243,31,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-05-14 14:01:40.785997+00
+244,31,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-14 14:01:40.785999+00
+245,31,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-14 14:01:40.786001+00
+246,31,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-14 14:01:40.786002+00
+247,31,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-14 14:01:40.786004+00
+248,31,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-14 14:01:40.786005+00
+249,32,market_hours,APPROVED,Market is open,null,2026-05-14 14:01:59.807537+00
+250,32,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-14 14:01:59.807547+00
+251,32,weekly_trade_limit,APPROVED,Weekly trades: 7/30,null,2026-05-14 14:01:59.80755+00
+252,32,position_size,APPROVED,Position size 11.6% within limits,null,2026-05-14 14:01:59.807552+00
+253,32,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-14 14:01:59.807554+00
+254,32,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-14 14:01:59.807556+00
+255,32,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-14 14:01:59.807558+00
+256,32,account_balance,APPROVED,Sufficient funds ($444.63 available),null,2026-05-14 14:01:59.80756+00
+257,33,market_hours,APPROVED,Market is open,null,2026-05-14 14:02:14.335864+00
+258,33,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-14 14:02:14.335869+00
+259,33,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-05-14 14:02:14.33587+00
+260,33,position_size,APPROVED,Position size 10.9% within limits,null,2026-05-14 14:02:14.335871+00
+261,33,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-14 14:02:14.335871+00
+262,33,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-14 14:02:14.335872+00
+263,33,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-14 14:02:14.335873+00
+264,33,account_balance,APPROVED,Sufficient funds ($444.63 available),null,2026-05-14 14:02:14.335874+00
+265,34,market_hours,APPROVED,Market is open,null,2026-05-14 14:02:38.274491+00
+266,34,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-14 14:02:38.2745+00
+267,34,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-05-14 14:02:38.274502+00
+268,34,position_size,APPROVED,Position size 7.4% within limits,null,2026-05-14 14:02:38.274504+00
+269,34,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-14 14:02:38.274505+00
+270,34,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-14 14:02:38.274507+00
+271,34,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-14 14:02:38.274509+00
+272,34,account_balance,APPROVED,Sufficient funds ($333.75 available),null,2026-05-14 14:02:38.27451+00
+273,35,market_hours,APPROVED,Market is open,null,2026-05-14 14:02:50.609825+00
+274,35,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-14 14:02:50.609835+00
+275,35,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-05-14 14:02:50.609837+00
+276,35,position_size,APPROVED,Position size 6.9% within limits,null,2026-05-14 14:02:50.609839+00
+277,35,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-14 14:02:50.609841+00
+278,35,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-14 14:02:50.609843+00
+279,35,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-14 14:02:50.609846+00
+280,35,account_balance,APPROVED,Sufficient funds ($333.75 available),null,2026-05-14 14:02:50.609848+00
+281,36,market_hours,APPROVED,Market is open,null,2026-05-14 14:03:27.186877+00
+282,36,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-14 14:03:27.186885+00
+283,36,weekly_trade_limit,APPROVED,Weekly trades: 7/30,null,2026-05-14 14:03:27.186887+00
+284,36,position_size,APPROVED,Position size 17.0% within limits,null,2026-05-14 14:03:27.186889+00
+285,36,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-14 14:03:27.18689+00
+286,36,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-14 14:03:27.186892+00
+287,36,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-14 14:03:27.186894+00
+288,36,account_balance,APPROVED,Sufficient funds ($262.10 available),null,2026-05-14 14:03:27.186895+00
+289,37,market_hours,APPROVED,Market is open,null,2026-05-15 14:02:12.447071+00
+290,37,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-15 14:02:12.447079+00
+291,37,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-05-15 14:02:12.447081+00
+292,37,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-15 14:02:12.447083+00
+293,37,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-15 14:02:12.447084+00
+294,37,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-15 14:02:12.447086+00
+295,37,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-15 14:02:12.447087+00
+296,37,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-15 14:02:12.447088+00
+297,38,market_hours,APPROVED,Market is open,null,2026-05-15 14:02:22.489107+00
+298,38,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-15 14:02:22.489122+00
+299,38,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-05-15 14:02:22.489125+00
+300,38,position_size,APPROVED,Position size 7.8% within limits,null,2026-05-15 14:02:22.489129+00
+301,38,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-15 14:02:22.489132+00
+302,38,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-15 14:02:22.489135+00
+303,38,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-15 14:02:22.489139+00
+304,38,account_balance,APPROVED,Sufficient funds ($134.20 available),null,2026-05-15 14:02:22.489142+00
+305,39,market_hours,APPROVED,Market is open,null,2026-05-18 14:02:26.448875+00
+306,39,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-18 14:02:26.448885+00
+307,39,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-05-18 14:02:26.448887+00
+308,39,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-18 14:02:26.448889+00
+309,39,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:02:26.448891+00
+310,39,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:02:26.448893+00
+311,39,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:02:26.448895+00
+312,39,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-18 14:02:26.448897+00
+313,40,market_hours,APPROVED,Market is open,null,2026-05-18 14:02:35.528019+00
+314,40,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-18 14:02:35.528026+00
+315,40,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-05-18 14:02:35.528028+00
+316,40,position_size,APPROVED,Position size 19.9% within limits,null,2026-05-18 14:02:35.528029+00
+317,40,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:02:35.52803+00
+318,40,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:02:35.528032+00
+319,40,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:02:35.528033+00
+320,40,account_balance,APPROVED,Sufficient funds ($214.74 available),null,2026-05-18 14:02:35.528034+00
+321,41,market_hours,APPROVED,Market is open,null,2026-05-18 14:02:44.813143+00
+322,41,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-18 14:02:44.813158+00
+323,41,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-05-18 14:02:44.813163+00
+324,41,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-18 14:02:44.813166+00
+325,41,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:02:44.813171+00
+326,41,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:02:44.813174+00
+327,41,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:02:44.813177+00
+328,41,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-18 14:02:44.81318+00
+329,42,market_hours,APPROVED,Market is open,null,2026-05-18 14:03:10.432976+00
+330,42,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-18 14:03:10.43299+00
+331,42,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-05-18 14:03:10.432993+00
+332,42,position_size,APPROVED,Position size 19.7% within limits,null,2026-05-18 14:03:10.432996+00
+333,42,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:03:10.432999+00
+334,42,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:03:10.433002+00
+335,42,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:03:10.433005+00
+336,42,account_balance,APPROVED,Sufficient funds ($406.23 available),null,2026-05-18 14:03:10.433009+00
+337,43,market_hours,APPROVED,Market is open,null,2026-05-18 14:03:26.015214+00
+338,43,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-18 14:03:26.015225+00
+339,43,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-05-18 14:03:26.015227+00
+340,43,position_size,APPROVED,Position size 19.7% within limits,null,2026-05-18 14:03:26.015229+00
+341,43,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:03:26.015232+00
+342,43,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:03:26.015234+00
+343,43,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:03:26.015236+00
+344,43,account_balance,APPROVED,Sufficient funds ($406.23 available),null,2026-05-18 14:03:26.015239+00
+345,44,market_hours,APPROVED,Market is open,null,2026-05-18 14:03:38.948353+00
+346,44,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-18 14:03:38.948359+00
+347,44,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-05-18 14:03:38.94836+00
+348,44,position_size,APPROVED,Position size 17.9% within limits,null,2026-05-18 14:03:38.948361+00
+349,44,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:03:38.948362+00
+350,44,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:03:38.948363+00
+351,44,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:03:38.948364+00
+352,44,account_balance,APPROVED,Sufficient funds ($406.23 available),null,2026-05-18 14:03:38.948365+00
+353,45,market_hours,APPROVED,Market is open,null,2026-05-18 14:03:58.432977+00
+354,45,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-18 14:03:58.432983+00
+355,45,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-18 14:03:58.432984+00
+356,45,position_size,APPROVED,Position size 4.6% within limits,null,2026-05-18 14:03:58.432985+00
+357,45,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:03:58.432985+00
+358,45,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:03:58.432986+00
+359,45,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:03:58.432987+00
+360,45,account_balance,APPROVED,Sufficient funds ($229.25 available),null,2026-05-18 14:03:58.432988+00
+361,46,market_hours,APPROVED,Market is open,null,2026-05-18 14:04:11.362473+00
+362,46,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-18 14:04:11.362481+00
+363,46,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-18 14:04:11.362482+00
+364,46,position_size,APPROVED,Position size 4.6% within limits,null,2026-05-18 14:04:11.362484+00
+365,46,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-18 14:04:11.362485+00
+366,46,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-18 14:04:11.362487+00
+367,46,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-18 14:04:11.362488+00
+368,46,account_balance,APPROVED,Sufficient funds ($229.25 available),null,2026-05-18 14:04:11.36249+00
+369,47,market_hours,APPROVED,Market is open,null,2026-05-19 14:03:05.088883+00
+370,47,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-19 14:03:05.088893+00
+371,47,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-19 14:03:05.088895+00
+372,47,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-19 14:03:05.088897+00
+373,47,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-19 14:03:05.088898+00
+374,47,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-19 14:03:05.088899+00
+375,47,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-19 14:03:05.088901+00
+376,47,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-19 14:03:05.088902+00
+377,48,market_hours,APPROVED,Market is open,null,2026-05-19 14:03:23.026619+00
+378,48,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-19 14:03:23.026627+00
+379,48,weekly_trade_limit,APPROVED,Weekly trades: 12/30,null,2026-05-19 14:03:23.026628+00
+380,48,position_size,APPROVED,Position size 14.0% within limits,null,2026-05-19 14:03:23.026629+00
+381,48,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-19 14:03:23.02663+00
+382,48,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-19 14:03:23.026631+00
+383,48,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-19 14:03:23.026632+00
+384,48,account_balance,APPROVED,Sufficient funds ($286.27 available),null,2026-05-19 14:03:23.026633+00
+385,49,market_hours,APPROVED,Market is open,null,2026-05-19 14:03:30.608085+00
+386,49,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-19 14:03:30.608098+00
+387,49,weekly_trade_limit,APPROVED,Weekly trades: 12/30,null,2026-05-19 14:03:30.608101+00
+388,49,position_size,APPROVED,Position size 9.4% within limits,null,2026-05-19 14:03:30.608103+00
+389,49,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-19 14:03:30.608105+00
+390,49,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-19 14:03:30.608107+00
+391,49,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-19 14:03:30.608109+00
+392,49,account_balance,APPROVED,Sufficient funds ($286.27 available),null,2026-05-19 14:03:30.608111+00
+393,50,market_hours,APPROVED,Market is open,null,2026-05-19 14:03:55.026989+00
+394,50,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-19 14:03:55.027+00
+395,50,weekly_trade_limit,APPROVED,Weekly trades: 13/30,null,2026-05-19 14:03:55.027002+00
+396,50,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-19 14:03:55.027003+00
+397,50,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-19 14:03:55.027004+00
+398,50,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-19 14:03:55.027006+00
+399,50,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-19 14:03:55.027007+00
+400,50,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-19 14:03:55.027008+00
+401,51,market_hours,APPROVED,Market is open,null,2026-05-19 14:04:10.133078+00
+402,51,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-19 14:04:10.133092+00
+403,51,weekly_trade_limit,APPROVED,Weekly trades: 14/30,null,2026-05-19 14:04:10.133096+00
+404,51,position_size,APPROVED,Position size 19.6% within limits,null,2026-05-19 14:04:10.133099+00
+405,51,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-19 14:04:10.133103+00
+406,51,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-19 14:04:10.133106+00
+407,51,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-19 14:04:10.13311+00
+408,51,account_balance,APPROVED,Sufficient funds ($262.65 available),null,2026-05-19 14:04:10.133113+00
+409,52,market_hours,APPROVED,Market is open,null,2026-05-19 14:04:24.094503+00
+410,52,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-19 14:04:24.09451+00
+411,52,weekly_trade_limit,APPROVED,Weekly trades: 14/30,null,2026-05-19 14:04:24.094512+00
+412,52,position_size,APPROVED,Position size 19.7% within limits,null,2026-05-19 14:04:24.094513+00
+413,52,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-19 14:04:24.094514+00
+414,52,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-19 14:04:24.094515+00
+415,52,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-19 14:04:24.094516+00
+416,52,account_balance,APPROVED,Sufficient funds ($262.65 available),null,2026-05-19 14:04:24.094517+00
+417,53,market_hours,APPROVED,Market is open,null,2026-05-20 14:01:16.989569+00
+418,53,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-20 14:01:16.98958+00
+419,53,weekly_trade_limit,APPROVED,Weekly trades: 14/30,null,2026-05-20 14:01:16.989582+00
+420,53,position_size,APPROVED,Position size 19.9% within limits,null,2026-05-20 14:01:16.989584+00
+421,53,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-20 14:01:16.989587+00
+422,53,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-20 14:01:16.989589+00
+423,53,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-20 14:01:16.989591+00
+424,53,account_balance,APPROVED,Sufficient funds ($262.65 available),null,2026-05-20 14:01:16.989593+00
+425,54,market_hours,APPROVED,Market is open,null,2026-05-20 14:01:31.205054+00
+426,54,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-20 14:01:31.205059+00
+427,54,weekly_trade_limit,APPROVED,Weekly trades: 14/30,null,2026-05-20 14:01:31.205061+00
+428,54,position_size,APPROVED,Position size 2.6% within limits,null,2026-05-20 14:01:31.205062+00
+429,54,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-20 14:01:31.205064+00
+430,54,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-20 14:01:31.205065+00
+431,54,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-20 14:01:31.205067+00
+432,54,account_balance,APPROVED,Sufficient funds ($262.65 available),null,2026-05-20 14:01:31.205068+00
+433,55,market_hours,APPROVED,Market is open,null,2026-05-20 14:01:53.520484+00
+434,55,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-20 14:01:53.520493+00
+435,55,weekly_trade_limit,APPROVED,Weekly trades: 15/30,null,2026-05-20 14:01:53.520495+00
+436,55,position_size,APPROVED,Position size 10.0% within limits,null,2026-05-20 14:01:53.520496+00
+437,55,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-20 14:01:53.520497+00
+438,55,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-20 14:01:53.520498+00
+439,55,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-20 14:01:53.5205+00
+440,55,account_balance,APPROVED,Sufficient funds ($236.63 available),null,2026-05-20 14:01:53.520501+00
+441,56,market_hours,APPROVED,Market is open,null,2026-05-20 14:02:09.191108+00
+442,56,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-20 14:02:09.191117+00
+443,56,weekly_trade_limit,APPROVED,Weekly trades: 15/30,null,2026-05-20 14:02:09.191118+00
+444,56,position_size,APPROVED,Position size 7.1% within limits,null,2026-05-20 14:02:09.19112+00
+445,56,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-20 14:02:09.191121+00
+446,56,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-20 14:02:09.191122+00
+447,56,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-20 14:02:09.191123+00
+448,56,account_balance,APPROVED,Sufficient funds ($236.63 available),null,2026-05-20 14:02:09.191124+00
+449,57,market_hours,APPROVED,Market is open,null,2026-05-20 14:03:10.139531+00
+450,57,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-20 14:03:10.139541+00
+451,57,weekly_trade_limit,APPROVED,Weekly trades: 16/30,null,2026-05-20 14:03:10.139543+00
+452,57,position_size,APPROVED,Position size 14.8% within limits,null,2026-05-20 14:03:10.139546+00
+453,57,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-20 14:03:10.139549+00
+454,57,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-20 14:03:10.139551+00
+455,57,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-20 14:03:10.139553+00
+456,57,account_balance,APPROVED,Sufficient funds ($167.28 available),null,2026-05-20 14:03:10.139555+00
+457,58,market_hours,APPROVED,Market is open,null,2026-05-21 16:04:37.936366+00
+458,58,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-21 16:04:37.936376+00
+459,58,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-21 16:04:37.936378+00
+460,58,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-21 16:04:37.936381+00
+461,58,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-21 16:04:37.936384+00
+462,58,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-21 16:04:37.936388+00
+463,58,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-21 16:04:37.936391+00
+464,58,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-21 16:04:37.936395+00
+465,59,market_hours,APPROVED,Market is open,null,2026-05-21 16:05:14.816703+00
+466,59,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-21 16:05:14.816711+00
+467,59,weekly_trade_limit,APPROVED,Weekly trades: 12/30,null,2026-05-21 16:05:14.816712+00
+468,59,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-21 16:05:14.816713+00
+469,59,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-21 16:05:14.816714+00
+470,59,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-21 16:05:14.816716+00
+471,59,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-21 16:05:14.816717+00
+472,59,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-21 16:05:14.816718+00
+473,60,market_hours,APPROVED,Market is open,null,2026-05-25 14:01:22.796685+00
+474,60,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-25 14:01:22.796693+00
+475,60,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-25 14:01:22.796694+00
+476,60,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-25 14:01:22.796696+00
+477,60,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-25 14:01:22.796697+00
+478,60,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-25 14:01:22.796698+00
+479,60,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-25 14:01:22.796699+00
+480,60,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-25 14:01:22.7967+00
+481,61,market_hours,APPROVED,Market is open,null,2026-05-25 14:01:49.686521+00
+482,61,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-25 14:01:49.686531+00
+483,61,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-25 14:01:49.686534+00
+484,61,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-25 14:01:49.686538+00
+485,61,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-25 14:01:49.68654+00
+486,61,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-25 14:01:49.686542+00
+487,61,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-25 14:01:49.686544+00
+488,61,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-25 14:01:49.686545+00
+489,62,market_hours,APPROVED,Market is open,null,2026-05-25 14:02:12.783809+00
+490,62,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-25 14:02:12.783816+00
+491,62,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-25 14:02:12.783818+00
+492,62,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-25 14:02:12.783819+00
+493,62,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-25 14:02:12.783821+00
+494,62,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-25 14:02:12.783822+00
+495,62,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-25 14:02:12.783823+00
+496,62,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-25 14:02:12.783825+00
+497,63,market_hours,APPROVED,Market is open,null,2026-05-26 14:01:51.714401+00
+498,63,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-26 14:01:51.714417+00
+499,63,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-05-26 14:01:51.714422+00
+500,63,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-26 14:01:51.714425+00
+501,63,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-26 14:01:51.714428+00
+502,63,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-26 14:01:51.714432+00
+503,63,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-26 14:01:51.714435+00
+504,63,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-26 14:01:51.714439+00
+505,64,market_hours,APPROVED,Market is open,null,2026-05-26 14:02:00.641655+00
+506,64,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-26 14:02:00.641663+00
+507,64,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-05-26 14:02:00.641665+00
+508,64,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-26 14:02:00.641667+00
+509,64,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-26 14:02:00.641668+00
+510,64,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-26 14:02:00.64167+00
+511,64,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-26 14:02:00.641671+00
+512,64,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-26 14:02:00.641673+00
+513,65,market_hours,APPROVED,Market is open,null,2026-05-26 14:02:08.122426+00
+514,65,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-26 14:02:08.12244+00
+515,65,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-05-26 14:02:08.122444+00
+516,65,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-26 14:02:08.122448+00
+517,65,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-26 14:02:08.12245+00
+518,65,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-26 14:02:08.122454+00
+519,65,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-26 14:02:08.122458+00
+520,65,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-26 14:02:08.122461+00
+521,66,market_hours,APPROVED,Market is open,null,2026-05-26 14:02:15.722086+00
+522,66,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-26 14:02:15.722099+00
+523,66,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-05-26 14:02:15.722103+00
+524,66,position_size,APPROVED,Position size 19.4% within limits,null,2026-05-26 14:02:15.722106+00
+525,66,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-26 14:02:15.72211+00
+526,66,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-26 14:02:15.722114+00
+527,66,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-26 14:02:15.722118+00
+528,66,account_balance,APPROVED,Sufficient funds ($391.72 available),null,2026-05-26 14:02:15.722122+00
+529,67,market_hours,APPROVED,Market is open,null,2026-05-26 14:02:40.288494+00
+530,67,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-26 14:02:40.288511+00
+531,67,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-26 14:02:40.288514+00
+532,67,position_size,APPROVED,Position size 18.4% within limits,null,2026-05-26 14:02:40.288517+00
+533,67,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-26 14:02:40.28852+00
+534,67,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-26 14:02:40.288523+00
+535,67,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-26 14:02:40.288527+00
+536,67,account_balance,APPROVED,Sufficient funds ($200.68 available),null,2026-05-26 14:02:40.28853+00
+537,68,market_hours,APPROVED,Market is open,null,2026-05-27 14:02:12.842603+00
+538,68,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-27 14:02:12.842618+00
+539,68,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-05-27 14:02:12.842621+00
+540,68,position_size,APPROVED,Position size 15.0% within limits,null,2026-05-27 14:02:12.842625+00
+541,68,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-27 14:02:12.842627+00
+542,68,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-27 14:02:12.84263+00
+543,68,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-27 14:02:12.842633+00
+544,68,account_balance,APPROVED,Sufficient funds ($200.67 available),null,2026-05-27 14:02:12.842636+00
+545,69,market_hours,APPROVED,Market is open,null,2026-05-27 14:03:33.512028+00
+546,69,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-27 14:03:33.512035+00
+547,69,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-05-27 14:03:33.512036+00
+548,69,position_size,APPROVED,Position size 4.5% within limits,null,2026-05-27 14:03:33.512037+00
+549,69,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-27 14:03:33.512039+00
+550,69,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-27 14:03:33.51204+00
+551,69,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-27 14:03:33.512041+00
+552,69,account_balance,APPROVED,Sufficient funds ($51.93 available),null,2026-05-27 14:03:33.512042+00
+553,70,market_hours,APPROVED,Market is open,null,2026-05-28 14:02:50.088646+00
+554,70,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-28 14:02:50.088661+00
+555,70,weekly_trade_limit,APPROVED,Weekly trades: 7/30,null,2026-05-28 14:02:50.088665+00
+556,70,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-28 14:02:50.088668+00
+557,70,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-28 14:02:50.088671+00
+558,70,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-28 14:02:50.088674+00
+559,70,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-28 14:02:50.088677+00
+560,70,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-28 14:02:50.088681+00
+561,71,market_hours,APPROVED,Market is open,null,2026-05-28 14:03:03.513753+00
+562,71,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-28 14:03:03.513762+00
+563,71,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-05-28 14:03:03.513763+00
+564,71,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-28 14:03:03.513765+00
+565,71,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-28 14:03:03.513766+00
+566,71,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-28 14:03:03.513767+00
+567,71,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-28 14:03:03.513768+00
+568,71,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-28 14:03:03.513769+00
+569,72,market_hours,APPROVED,Market is open,null,2026-05-28 14:03:29.553011+00
+570,72,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-28 14:03:29.553024+00
+571,72,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-05-28 14:03:29.553027+00
+572,72,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-28 14:03:29.553031+00
+573,72,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-28 14:03:29.553034+00
+574,72,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-28 14:03:29.553036+00
+575,72,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-28 14:03:29.553039+00
+576,72,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-28 14:03:29.553043+00
+577,73,market_hours,APPROVED,Market is open,null,2026-05-28 14:03:43.609212+00
+578,73,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-05-28 14:03:43.609226+00
+579,73,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-05-28 14:03:43.60923+00
+580,73,position_size,APPROVED,Position size 17.9% within limits,null,2026-05-28 14:03:43.609233+00
+581,73,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-28 14:03:43.609237+00
+582,73,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-28 14:03:43.60924+00
+583,73,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-28 14:03:43.609243+00
+584,73,account_balance,APPROVED,Sufficient funds ($226.26 available),null,2026-05-28 14:03:43.609246+00
+585,74,market_hours,APPROVED,Market is open,null,2026-05-29 14:02:38.037527+00
+586,74,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-05-29 14:02:38.037533+00
+587,74,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-05-29 14:02:38.037535+00
+588,74,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-29 14:02:38.037537+00
+589,74,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-29 14:02:38.037538+00
+590,74,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-29 14:02:38.03754+00
+591,74,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-29 14:02:38.037541+00
+592,74,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-29 14:02:38.037543+00
+593,75,market_hours,APPROVED,Market is open,null,2026-05-29 14:03:09.659317+00
+594,75,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-05-29 14:03:09.659326+00
+595,75,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-05-29 14:03:09.659328+00
+596,75,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-05-29 14:03:09.65933+00
+597,75,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-29 14:03:09.659332+00
+598,75,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-29 14:03:09.659334+00
+599,75,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-29 14:03:09.659336+00
+600,75,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-05-29 14:03:09.659338+00
+601,76,market_hours,APPROVED,Market is open,null,2026-05-29 14:03:45.570797+00
+602,76,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-05-29 14:03:45.570804+00
+603,76,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-05-29 14:03:45.570806+00
+604,76,position_size,APPROVED,Position size 8.1% within limits,null,2026-05-29 14:03:45.570807+00
+605,76,portfolio_concentration,APPROVED,Concentration check passed,null,2026-05-29 14:03:45.570808+00
+606,76,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-05-29 14:03:45.57081+00
+607,76,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-05-29 14:03:45.570811+00
+608,76,account_balance,APPROVED,Sufficient funds ($116.15 available),null,2026-05-29 14:03:45.570812+00
+609,77,market_hours,APPROVED,Market is open,null,2026-06-02 14:02:52.265961+00
+610,77,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-02 14:02:52.265971+00
+611,77,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-06-02 14:02:52.265973+00
+612,77,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-02 14:02:52.265974+00
+613,77,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-02 14:02:52.265976+00
+614,77,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-02 14:02:52.265978+00
+615,77,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-02 14:02:52.26598+00
+616,77,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-02 14:02:52.265982+00
+617,78,market_hours,APPROVED,Market is open,null,2026-06-02 14:03:00.629287+00
+618,78,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-06-02 14:03:00.629294+00
+619,78,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-06-02 14:03:00.629296+00
+620,78,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-02 14:03:00.629297+00
+621,78,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-02 14:03:00.629299+00
+622,78,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-02 14:03:00.6293+00
+623,78,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-02 14:03:00.629302+00
+624,78,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-02 14:03:00.629303+00
+625,79,market_hours,APPROVED,Market is open,null,2026-06-02 14:03:08.565427+00
+626,79,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-06-02 14:03:08.565436+00
+627,79,weekly_trade_limit,APPROVED,Weekly trades: 11/30,null,2026-06-02 14:03:08.565437+00
+628,79,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-02 14:03:08.565439+00
+629,79,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-02 14:03:08.56544+00
+630,79,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-02 14:03:08.565442+00
+631,79,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-02 14:03:08.565443+00
+632,79,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-02 14:03:08.565444+00
+633,80,market_hours,APPROVED,Market is open,null,2026-06-03 14:01:50.057429+00
+634,80,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-03 14:01:50.057441+00
+635,80,weekly_trade_limit,APPROVED,Weekly trades: 12/30,null,2026-06-03 14:01:50.057444+00
+636,80,position_size,APPROVED,Position size 10.9% within limits,null,2026-06-03 14:01:50.057446+00
+637,80,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-03 14:01:50.057449+00
+638,80,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-03 14:01:50.057452+00
+639,80,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-03 14:01:50.057455+00
+640,80,account_balance,APPROVED,Sufficient funds ($130.57 available),null,2026-06-03 14:01:50.057458+00
+641,81,market_hours,APPROVED,Market is open,null,2026-06-03 14:02:18.005655+00
+642,81,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-06-03 14:02:18.005662+00
+643,81,weekly_trade_limit,APPROVED,Weekly trades: 12/30,null,2026-06-03 14:02:18.005663+00
+644,81,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-03 14:02:18.005664+00
+645,81,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-03 14:02:18.005665+00
+646,81,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-03 14:02:18.005666+00
+647,81,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-03 14:02:18.005667+00
+648,81,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-03 14:02:18.005668+00
+649,82,market_hours,APPROVED,Market is open,null,2026-06-03 14:02:26.684154+00
+650,82,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-06-03 14:02:26.684161+00
+651,82,weekly_trade_limit,APPROVED,Weekly trades: 13/30,null,2026-06-03 14:02:26.684163+00
+652,82,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-03 14:02:26.684164+00
+653,82,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-03 14:02:26.684165+00
+654,82,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-03 14:02:26.684167+00
+655,82,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-03 14:02:26.684168+00
+656,82,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-03 14:02:26.684169+00
+657,83,market_hours,APPROVED,Market is open,null,2026-06-03 14:02:43.713989+00
+658,83,daily_trade_limit,APPROVED,Daily trades: 3/10,null,2026-06-03 14:02:43.713997+00
+659,83,weekly_trade_limit,APPROVED,Weekly trades: 14/30,null,2026-06-03 14:02:43.713998+00
+660,83,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-03 14:02:43.713999+00
+661,83,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-03 14:02:43.714+00
+662,83,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-03 14:02:43.714002+00
+663,83,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-03 14:02:43.714003+00
+664,83,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-03 14:02:43.714004+00
+665,84,market_hours,APPROVED,Market is open,null,2026-06-03 14:02:51.302979+00
+666,84,daily_trade_limit,APPROVED,Daily trades: 4/10,null,2026-06-03 14:02:51.302989+00
+667,84,weekly_trade_limit,APPROVED,Weekly trades: 15/30,null,2026-06-03 14:02:51.302991+00
+668,84,position_size,APPROVED,Position size 19.9% within limits,null,2026-06-03 14:02:51.302992+00
+669,84,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-03 14:02:51.302994+00
+670,84,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-03 14:02:51.302996+00
+671,84,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-03 14:02:51.302997+00
+672,84,account_balance,APPROVED,Sufficient funds ($282.20 available),null,2026-06-03 14:02:51.302999+00
+673,85,market_hours,APPROVED,Market is open,null,2026-06-08 14:02:59.5619+00
+674,85,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-08 14:02:59.561911+00
+675,85,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-06-08 14:02:59.561914+00
+676,85,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-08 14:02:59.561916+00
+677,85,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-08 14:02:59.561919+00
+678,85,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-08 14:02:59.561921+00
+679,85,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-08 14:02:59.561923+00
+680,85,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-08 14:02:59.561925+00
+681,86,market_hours,APPROVED,Market is open,null,2026-06-08 14:03:13.230375+00
+682,86,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-06-08 14:03:13.230386+00
+683,86,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-06-08 14:03:13.230388+00
+684,86,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-08 14:03:13.23039+00
+685,86,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-08 14:03:13.230393+00
+686,86,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-08 14:03:13.230395+00
+687,86,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-08 14:03:13.230397+00
+688,86,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-08 14:03:13.230399+00
+689,87,market_hours,APPROVED,Market is open,null,2026-06-09 14:02:29.742615+00
+690,87,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-09 14:02:29.742628+00
+691,87,weekly_trade_limit,APPROVED,Weekly trades: 10/30,null,2026-06-09 14:02:29.742632+00
+692,87,position_size,APPROVED,Position size 6.7% within limits,null,2026-06-09 14:02:29.742636+00
+693,87,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-09 14:02:29.74264+00
+694,87,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-09 14:02:29.742644+00
+695,87,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-09 14:02:29.742648+00
+696,87,account_balance,APPROVED,Sufficient funds ($409.87 available),null,2026-06-09 14:02:29.742652+00
+697,88,market_hours,APPROVED,Market is open,null,2026-06-10 14:02:54.42636+00
+698,88,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-10 14:02:54.426369+00
+699,88,weekly_trade_limit,APPROVED,Weekly trades: 3/30,null,2026-06-10 14:02:54.42637+00
+700,88,position_size,APPROVED,Position size 9.6% within limits,null,2026-06-10 14:02:54.426371+00
+701,88,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-10 14:02:54.426373+00
+702,88,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-10 14:02:54.426374+00
+703,88,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-10 14:02:54.426376+00
+704,88,account_balance,APPROVED,Sufficient funds ($347.41 available),null,2026-06-10 14:02:54.426378+00
+705,89,market_hours,APPROVED,Market is open,null,2026-06-11 14:02:03.531552+00
+706,89,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-11 14:02:03.531561+00
+707,89,weekly_trade_limit,APPROVED,Weekly trades: 4/30,null,2026-06-11 14:02:03.531563+00
+708,89,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-11 14:02:03.531565+00
+709,89,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-11 14:02:03.531566+00
+710,89,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-11 14:02:03.531568+00
+711,89,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-11 14:02:03.53157+00
+712,89,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-11 14:02:03.531571+00
+713,90,market_hours,APPROVED,Market is open,null,2026-06-11 14:02:12.765656+00
+714,90,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-06-11 14:02:12.765665+00
+715,90,weekly_trade_limit,APPROVED,Weekly trades: 5/30,null,2026-06-11 14:02:12.765667+00
+716,90,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-11 14:02:12.765669+00
+717,90,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-11 14:02:12.765672+00
+718,90,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-11 14:02:12.765674+00
+719,90,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-11 14:02:12.765676+00
+720,90,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-11 14:02:12.765678+00
+721,91,market_hours,APPROVED,Market is open,null,2026-06-11 14:02:28.824808+00
+722,91,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-06-11 14:02:28.824813+00
+723,91,weekly_trade_limit,APPROVED,Weekly trades: 6/30,null,2026-06-11 14:02:28.824814+00
+724,91,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-11 14:02:28.824815+00
+725,91,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-11 14:02:28.824815+00
+726,91,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-11 14:02:28.824816+00
+727,91,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-11 14:02:28.824817+00
+728,91,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-11 14:02:28.824818+00
+729,92,market_hours,APPROVED,Market is open,null,2026-06-15 14:01:47.589638+00
+730,92,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-15 14:01:47.589653+00
+731,92,weekly_trade_limit,APPROVED,Weekly trades: 7/30,null,2026-06-15 14:01:47.589657+00
+732,92,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-15 14:01:47.58966+00
+733,92,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-15 14:01:47.589663+00
+734,92,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-15 14:01:47.589666+00
+735,92,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-15 14:01:47.589669+00
+736,92,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-15 14:01:47.589672+00
+737,93,market_hours,APPROVED,Market is open,null,2026-06-15 14:02:07.275327+00
+738,93,daily_trade_limit,APPROVED,Daily trades: 1/10,null,2026-06-15 14:02:07.275338+00
+739,93,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-06-15 14:02:07.27534+00
+740,93,position_size,APPROVED,Position size check skipped (sell reduces concentration),null,2026-06-15 14:02:07.275342+00
+741,93,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-15 14:02:07.275344+00
+742,93,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-15 14:02:07.275346+00
+743,93,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-15 14:02:07.275348+00
+744,93,account_balance,APPROVED,Account balance check skipped (sell generates cash),null,2026-06-15 14:02:07.27535+00
+745,94,market_hours,APPROVED,Market is open,null,2026-06-15 14:02:34.373861+00
+746,94,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-06-15 14:02:34.373874+00
+747,94,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-06-15 14:02:34.373876+00
+748,94,position_size,APPROVED,Position size 12.5% within limits,null,2026-06-15 14:02:34.373878+00
+749,94,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-15 14:02:34.37388+00
+750,94,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-15 14:02:34.373882+00
+751,94,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-15 14:02:34.373884+00
+752,94,account_balance,APPROVED,Sufficient funds ($719.93 available),null,2026-06-15 14:02:34.373886+00
+753,95,market_hours,APPROVED,Market is open,null,2026-06-15 14:02:52.429006+00
+754,95,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-06-15 14:02:52.429016+00
+755,95,weekly_trade_limit,APPROVED,Weekly trades: 9/30,null,2026-06-15 14:02:52.429018+00
+756,95,position_size,APPROVED,Position size 16.2% within limits,null,2026-06-15 14:02:52.429021+00
+757,95,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-15 14:02:52.429023+00
+758,95,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-15 14:02:52.429025+00
+759,95,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-15 14:02:52.429027+00
+760,95,account_balance,APPROVED,Sufficient funds ($719.93 available),null,2026-06-15 14:02:52.429029+00
+761,96,market_hours,APPROVED,Market is open,null,2026-06-15 14:03:11.591893+00
+762,96,daily_trade_limit,APPROVED,Daily trades: 2/10,null,2026-06-15 14:03:11.591902+00
+763,96,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-06-15 14:03:11.591905+00
+764,96,position_size,APPROVED,Position size 15.7% within limits,null,2026-06-15 14:03:11.591906+00
+765,96,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-15 14:03:11.591908+00
+766,96,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-15 14:03:11.59191+00
+767,96,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-15 14:03:11.591912+00
+768,96,account_balance,APPROVED,Sufficient funds ($719.93 available),null,2026-06-15 14:03:11.591914+00
+769,97,market_hours,APPROVED,Market is open,null,2026-06-16 14:01:53.524942+00
+770,97,daily_trade_limit,APPROVED,Daily trades: 0/10,null,2026-06-16 14:01:53.524955+00
+771,97,weekly_trade_limit,APPROVED,Weekly trades: 8/30,null,2026-06-16 14:01:53.524957+00
+772,97,position_size,APPROVED,Position size 3.4% within limits,null,2026-06-16 14:01:53.524959+00
+773,97,portfolio_concentration,APPROVED,Concentration check passed,null,2026-06-16 14:01:53.524961+00
+774,97,daily_loss_limit,APPROVED,Daily P&L: 0.00%,null,2026-06-16 14:01:53.524963+00
+775,97,duplicate_trade,APPROVED,No recent duplicate trades,null,2026-06-16 14:01:53.524965+00
+776,97,account_balance,APPROVED,Sufficient funds ($578.84 available),null,2026-06-16 14:01:53.524967+00

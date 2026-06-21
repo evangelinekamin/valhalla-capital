@@ -1,0 +1,15 @@
+{
+  "request_id": "6bab2620-100b-407f-8029-3c3946e057bb",
+  "timestamp": "2026-06-16T14:01:25.698638",
+  "ticker": "OBE",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.75
+  },
+  "reasoning": "OBE is a pure-play Canadian oil producer with strong Q1 2026 operating income ($29.6M) despite net losses due to non-operating expenses. With ongoing Iran tensions, US military action against oil tankers, and UK seizure of Russian shadow tanker, oil supply disruptions are real and continuing. OBE's valuation appears attractive relative to peers, and it would provide direct exposure to oil price upside from continued geopolitical risk premium. The current price of $10.27 is below its 52-week high of $14.59, providing a margin of safety.",
+  "quantity": 17.0,
+  "kelly_fraction": 0.22
+}

@@ -1,0 +1,12 @@
+# Final container state at shutdown Tue Jun 16 11:24:55 PM UTC 2026
+overseer	valhalla/overseer:latest	Exited (137) 26 minutes ago
+trading-service	valhalla/trading-service:latest	Up 5 weeks (healthy)
+ib-gateway	ghcr.io/gnzsnz/ib-gateway:stable	Up 24 hours (healthy)
+scraper	valhalla/scraper:latest	Exited (0) About a minute ago
+miniflux	miniflux/miniflux:2.2.5	Exited (0) About a minute ago
+processing-db	postgres:16-alpine	Exited (0) About a minute ago
+miniflux-db	postgres:16-alpine	Exited (0) About a minute ago
+fmp-mysql	mysql:8.0	Exited (0) About a minute ago
+trading-postgres	timescale/timescaledb:latest-pg15	Up 6 weeks (healthy)
+fmp-api	valhalla/fmp-api:latest	Exited (0) About a minute ago
+overseer-postgres	pgvector/pgvector:pg15	Exited (0) About a minute ago

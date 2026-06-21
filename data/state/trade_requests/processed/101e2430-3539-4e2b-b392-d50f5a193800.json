@@ -1,0 +1,15 @@
+{
+  "request_id": "101e2430-3539-4e2b-b392-d50f5a193800",
+  "timestamp": "2026-05-08T14:02:30.866024",
+  "ticker": "GPN",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.75
+  },
+  "reasoning": "GPN is trading at 5x P/E with $6.5B buyback planned, $3.4B FCF in 2026, and revenue/EBITDA/EPS up 60% from 2021-2026E. This represents a significant valuation gap versus peers and provides the best opportunity to deploy the portfolio's 44.4% cash position.",
+  "quantity": 1.0,
+  "kelly_fraction": 0.26
+}

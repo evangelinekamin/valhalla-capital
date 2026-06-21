@@ -1,0 +1,15 @@
+{
+  "request_id": "a8fa4a89-d881-4fae-a218-9fd1929ce074",
+  "timestamp": "2026-05-20T14:02:04.702800",
+  "ticker": "GPN",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 30.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.85
+  },
+  "reasoning": "GPN is a high-quality value stock trading at 5x P/E with $2.97B Q1 revenue and $6.5B buyback program. The company has strong fundamentals and represents a compelling deep value opportunity. Adding to this position aligns with our value investing thesis and deploys cash to address the portfolio's -10.31% alpha underperformance.",
+  "quantity": 1.0,
+  "kelly_fraction": 0.275
+}

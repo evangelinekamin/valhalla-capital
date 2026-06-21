@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Valhalla Capital — Status{% endblock %}
+
+{% block content %}
+<div id="status-board"
+     hx-get="/partials/status-board"
+     hx-trigger="every 30s [document.visibilityState === 'visible']"
+     hx-swap="innerHTML swap:150ms">
+
+    {% include "partials/status_board.html" %}
+
+</div>
+{% endblock %}

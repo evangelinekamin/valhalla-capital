@@ -1,0 +1,15 @@
+{
+  "request_id": "ffb2320a-8b87-4836-ad5c-1347e69245cc",
+  "timestamp": "2026-05-20T14:01:26.579866",
+  "ticker": "OBE",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -12.0,
+    "confidence": 0.9
+  },
+  "reasoning": "OBE is a Canadian oil producer trading at $12.85 with strong Q1 2026 fundamentals: $151.4M revenue, $29.6M operating income, $263.6M cash. Substack consistently recommends holding OBE as 'the most shorted oil producer' with GME-like short squeeze potential. The company benefits from oil prices at $110/barrel and upcoming summer travel demand, which should boost demand for oil and gas.",
+  "quantity": 2.0,
+  "kelly_fraction": 0.315
+}

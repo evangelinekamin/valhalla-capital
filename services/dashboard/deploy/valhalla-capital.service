@@ -1,0 +1,41 @@
+[Unit]
+Description=Valhalla Capital Dashboard Web
+After=network.target
+
+[Service]
+Type=simple
+User=dashboard
+Group=dashboard
+WorkingDirectory=/opt/valhalla-capital
+ExecStart=/opt/valhalla-capital/venv/bin/uvicorn app.main:app \
+    --host 0.0.0.0 \
+    --port 8050 \
+    --workers 1 \
+    --timeout-keep-alive 65 \
+    --limit-concurrency 200 \
+    --log-level info
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+LimitNOFILE=65536
+UMask=027
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateDevices=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+LockPersonality=true
+CapabilityBoundingSet=
+ReadWritePaths=/opt/valhalla-capital
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

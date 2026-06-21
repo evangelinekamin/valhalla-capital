@@ -1,0 +1,14 @@
+{
+  "request_id": "4992a8cf-965c-4833-9680-387877016578",
+  "timestamp": "2026-06-02T14:03:04.108891",
+  "ticker": "SBLK",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 10.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.75
+  },
+  "reasoning": "SBLK has performed moderately well (+1.6% unrealized PnL) and is our second largest position at 17.5% of portfolio. Selling 1 share (16.7% of position) will generate approximately $27.73 in cash, increasing portfolio cash to ~13.5% and reducing concentration risk. This addresses the portfolio rebalancing imperative while maintaining exposure to this core holding.",
+  "quantity": 1.0
+}

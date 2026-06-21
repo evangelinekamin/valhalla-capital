@@ -1,0 +1,15 @@
+{
+  "request_id": "913e8059-92bc-4321-99a5-ef76552075bf",
+  "timestamp": "2026-05-14T14:03:22.427077",
+  "ticker": "COGT",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 30.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.75
+  },
+  "reasoning": "COGT has strong clinical oncology pipeline with Bezuclastinib for Systemic Mastocytosis & GIST, with >$3B peak sales estimated. It's a potential M&A target and has been consistently recommended by Yellowbrick. This deployment addresses the cash drag and diversifies the portfolio.",
+  "quantity": 5.0,
+  "kelly_fraction": 0.275
+}

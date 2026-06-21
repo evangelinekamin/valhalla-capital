@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-06-16T23:15:45.248143Z",
+  "total_value": 902.32,
+  "cash_balance": 547.63,
+  "positions": [
+    {
+      "ticker": "RLI",
+      "quantity": 2,
+      "avg_cost": 51.5,
+      "current_price": 53.8153839,
+      "market_value": 107.63,
+      "unrealized_pnl": 4.63,
+      "unrealized_pnl_pct": 0.04495145631067961
+    },
+    {
+      "ticker": "SMMT",
+      "quantity": 10,
+      "avg_cost": 14.10964,
+      "current_price": 13.96399975,
+      "market_value": 139.64,
+      "unrealized_pnl": -1.46,
+      "unrealized_pnl_pct": -0.01034753544385257
+    },
+    {
+      "ticker": "VISN",
+      "quantity": 6,
+      "avg_cost": 12.40943335,
+      "current_price": 12.7560005,
+      "market_value": 76.54,
+      "unrealized_pnl": 2.08,
+      "unrealized_pnl_pct": 0.027935737022727686
+    },
+    {
+      "ticker": "OBE",
+      "quantity": 3,
+      "avg_cost": 10.403003,
+      "current_price": 10.29552555,
+      "market_value": 30.89,
+      "unrealized_pnl": -0.32,
+      "unrealized_pnl_pct": -0.010253449572846096
+    }
+  ],
+  "daily_pnl": 0.0,
+  "daily_pnl_pct": 0.0
+}

@@ -1,0 +1,14 @@
+{
+  "request_id": "3549ab37-9f36-4a87-9c2a-fbe216d5d35e",
+  "timestamp": "2026-05-26T14:00:48.326566",
+  "ticker": "OBE",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.3,
+    "expected_gain_pct": 8.0,
+    "expected_loss_pct": -25.0,
+    "confidence": 0.8
+  },
+  "reasoning": "OBE's summer travel thesis remains but faces significant headwind from the Strait of Hormuz reopening, which would pressure oil premium and create a lower oil price environment. The portfolio is overweight energy (27.6% combined OBE+DMLP) and faces geopolitical uncertainty. With RILY as the sole strong performer, reducing energy concentration improves portfolio diversification and risk management.",
+  "quantity": 11.0
+}

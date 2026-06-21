@@ -1,0 +1,14 @@
+{
+  "request_id": "ddf4a9d6-b09c-4a35-9f5f-b9b5771a4648",
+  "timestamp": "2026-05-04T14:01:13.335342",
+  "ticker": "BMI",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 12.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.85
+  },
+  "reasoning": "BMI concentration exceeds 20% limit (currently 23.5%). Trim to reduce concentration risk while maintaining thesis exposure. Current price $121.505 is still 11% below insider purchase price of $136+, maintaining the core thesis. The position remains fundamentally strong with Q1 2026 revenue growth and margin expansion.",
+  "quantity": 1.0
+}

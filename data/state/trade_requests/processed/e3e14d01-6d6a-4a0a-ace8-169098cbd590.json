@@ -1,0 +1,14 @@
+{
+  "request_id": "e3e14d01-6d6a-4a0a-ace8-169098cbd590",
+  "timestamp": "2026-05-05T14:02:14.486442",
+  "ticker": "TBPH",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.4,
+    "expected_gain_pct": 20.0,
+    "expected_loss_pct": -35.0,
+    "confidence": 0.65
+  },
+  "reasoning": "TBPH is a stub position (6.5% of portfolio) without near-term catalyst. Biotech valuation requires clinical catalysts that aren't imminent. Better capital allocation opportunities exist in oil crisis beneficiaries.",
+  "quantity": 4.0
+}

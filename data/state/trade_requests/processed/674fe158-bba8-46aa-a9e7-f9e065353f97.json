@@ -1,0 +1,14 @@
+{
+  "request_id": "674fe158-bba8-46aa-a9e7-f9e065353f97",
+  "timestamp": "2026-05-13T14:03:35.976495",
+  "ticker": "SU",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -1.5,
+    "confidence": 0.95
+  },
+  "reasoning": "SU thesis is broken: persistent divergence from oil fundamentals despite Iran war and Hormuz blockade, consistent Substack sell recommendations, and Q1 beat not moving the stock. Market is pricing in demand destruction or de-escalation. Falsification criteria met: Hormuz remains closed but stock underperforms, indicating thesis invalidation.",
+  "quantity": 1.0
+}

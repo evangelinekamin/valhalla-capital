@@ -1,0 +1,13 @@
+[Unit]
+Description=Valhalla daily backup to Backblaze B2
+Wants=docker.service
+After=docker.service network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/valhalla/services/backup.sh
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=2h
+Nice=10
+IOSchedulingClass=idle

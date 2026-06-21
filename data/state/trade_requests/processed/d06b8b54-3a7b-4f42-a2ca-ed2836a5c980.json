@@ -1,0 +1,15 @@
+{
+  "request_id": "d06b8b54-3a7b-4f42-a2ca-ed2836a5c980",
+  "timestamp": "2026-06-03T14:01:15.001413",
+  "ticker": "RLI",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 15.0,
+    "expected_loss_pct": -8.0,
+    "confidence": 0.75
+  },
+  "reasoning": "RLI represents a high-conviction insurance sector rotation opportunity with strong fundamentals. Trading at $51.005 with Q1 2026 net income of $54.89M and $0.60 EPS, RLI shows consistent profitability in the property & casualty insurance space. With a low beta (0.383) and $4.66 dividend, it provides defensive characteristics while benefiting from sector rotation signals. The recent $859K insider buying cluster confirms management's confidence in the company's prospects.",
+  "quantity": 2.0,
+  "kelly_fraction": 0.26999999999999996
+}

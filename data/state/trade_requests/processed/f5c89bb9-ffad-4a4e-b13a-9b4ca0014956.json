@@ -1,0 +1,15 @@
+{
+  "request_id": "f5c89bb9-ffad-4a4e-b13a-9b4ca0014956",
+  "timestamp": "2026-05-14T14:01:54.706740",
+  "ticker": "RILY",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.8,
+    "expected_gain_pct": 15.0,
+    "expected_loss_pct": -5.0,
+    "confidence": 0.85
+  },
+  "reasoning": "RILY is the portfolio's top performer (+11.2%) and has strong fundamentals (Q1 revenue $450M, net income $213M). It's a M&A/IPO wave beneficiary and has been consistently recommended by Substack. Adding to this high-conviction winner addresses the cash drag and underperformance.",
+  "quantity": 14.0,
+  "kelly_fraction": 0.36666666666666664
+}

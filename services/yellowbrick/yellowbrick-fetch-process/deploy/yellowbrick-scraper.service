@@ -1,0 +1,23 @@
+[Unit]
+Description=Yellowbrick Pitch Scraper
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/yellowbrick-fetch-process
+ExecStart=/opt/yellowbrick-fetch-process/run_scraper.sh
+User=scraper
+Group=scraper
+
+# Security hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/yellowbrick-fetch-process/data /opt/yellowbrick-fetch-process/logs
+PrivateTmp=yes
+
+# Timeout (playwright browser operations)
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

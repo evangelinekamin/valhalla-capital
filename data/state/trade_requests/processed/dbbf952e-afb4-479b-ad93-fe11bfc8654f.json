@@ -1,0 +1,15 @@
+{
+  "request_id": "dbbf952e-afb4-479b-ad93-fe11bfc8654f",
+  "timestamp": "2026-05-13T14:02:50.255628",
+  "ticker": "GPN",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.9
+  },
+  "reasoning": "GPN is a compelling value opportunity trading at 5x P/E with strong underlying business generating $849M EBITDA in Q1 2026. The $6.5B buyback program is temporarily paused but will resume as leverage improves. This represents the highest-conviction opportunity to deploy our 44% cash drag.",
+  "quantity": 2.0,
+  "kelly_fraction": 0.3
+}

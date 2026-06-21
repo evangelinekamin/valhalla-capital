@@ -1,0 +1,14 @@
+{
+  "request_id": "e964dd4f-37eb-4f7d-b199-b6cfb7c00893",
+  "timestamp": "2026-05-21T16:05:10.233500",
+  "ticker": "OBE",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 2.0,
+    "expected_loss_pct": -3.0,
+    "confidence": 0.7
+  },
+  "reasoning": "Trimming 4 shares of OBE to reduce portfolio concentration from 19.7% toward target ~12.5%. Portfolio in crisis with -11.26% alpha underperformance requires rebalancing. Geopolitical de-escalation (Iran strike called off) may pressure oil premium. Cash raised can be deployed to other opportunities.",
+  "quantity": 4.0
+}

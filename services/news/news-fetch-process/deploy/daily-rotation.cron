@@ -1,0 +1,10 @@
+# Financial News Worker - Daily Alert Rotation
+# Runs daily at midnight ET (05:00 UTC during EST, 04:00 UTC during EDT)
+#
+# Install with: sudo ./deploy/install.sh
+#
+# EST (November - March):
+0 5 * * * @@PROJECT_DIR@@/venv/bin/python @@PROJECT_DIR@@/scripts/daily_rotation.py >> @@PROJECT_DIR@@/logs/rotation.log 2>&1
+#
+# EDT (March - November) - uncomment below and comment above:
+# 0 4 * * * @@PROJECT_DIR@@/venv/bin/python @@PROJECT_DIR@@/scripts/daily_rotation.py >> @@PROJECT_DIR@@/logs/rotation.log 2>&1

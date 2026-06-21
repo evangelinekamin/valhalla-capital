@@ -1,0 +1,15 @@
+{
+  "request_id": "dc90b1c1-d53a-495e-ab8b-8354ada963d5",
+  "timestamp": "2026-06-15T14:02:29.452269",
+  "ticker": "MOBI",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 30.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.85
+  },
+  "reasoning": "MOBI has massive insider buying ($19.1M by 7 insiders) at $14.99, representing 30% upside from current price of $11.50. This is a strong signal of insider confidence in the company's prospects. As a medical device company, MOBI benefits from the growing healthcare technology sector. A 10-share position ($115) keeps commission drag at 1.74%, well within our 5% threshold.",
+  "quantity": 10.0,
+  "kelly_fraction": 0.3125
+}

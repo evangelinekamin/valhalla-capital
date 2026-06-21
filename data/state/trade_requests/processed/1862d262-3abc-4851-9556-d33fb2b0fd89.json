@@ -1,0 +1,14 @@
+{
+  "request_id": "1862d262-3abc-4851-9556-d33fb2b0fd89",
+  "timestamp": "2026-05-26T14:01:17.017331",
+  "ticker": "AENT",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 10.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.9
+  },
+  "reasoning": "AENT is a stub position at 1.9% (below 5% minimum threshold) and is approaching its stop-loss of $5.95 ($6.485 current price is only $0.535 above stop). The position is too small to justify monitoring cost while approaching a critical threshold. With no earnings date found in system and the portfolio crisis requiring urgent optimization, selling this stub position frees up capital for higher-conviction opportunities and eliminates a monitoring burden.",
+  "quantity": 3.0
+}

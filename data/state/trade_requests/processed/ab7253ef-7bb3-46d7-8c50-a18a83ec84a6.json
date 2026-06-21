@@ -1,0 +1,14 @@
+{
+  "request_id": "ab7253ef-7bb3-46d7-8c50-a18a83ec84a6",
+  "timestamp": "2026-06-03T14:02:39.237664",
+  "ticker": "RILY",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 12.0,
+    "expected_loss_pct": -8.0,
+    "confidence": 0.65
+  },
+  "reasoning": "RILY is currently a stub position at 4.1% of portfolio (below 5% minimum), requiring exit to eliminate monitoring cost. With +27.0% performance, exiting the full position locks in gains and generates cash for higher-conviction opportunities. The position has unknown earnings risk, making full exit the appropriate risk management action.",
+  "quantity": 4.0
+}

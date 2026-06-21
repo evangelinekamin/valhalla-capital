@@ -1,0 +1,14 @@
+{
+  "request_id": "c22b48c6-1713-4486-a5a7-8a07712a2e71",
+  "timestamp": "2026-05-08T14:01:51.803202",
+  "ticker": "SU",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 20.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.65
+  },
+  "reasoning": "SU position showing concerning divergence from oil price fundamentals despite Brent at $114, with 5.4% decline from entry. Trim reduces exposure to geopolitical uncertainty while maintaining partial position for potential upside.",
+  "quantity": 1.0
+}

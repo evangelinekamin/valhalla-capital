@@ -1,0 +1,14 @@
+{
+  "request_id": "adba1cb9-d86a-4a3e-9589-6a9ea83cd2aa",
+  "timestamp": "2026-05-19T14:02:30.256800",
+  "ticker": "AENT",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -25.0,
+    "confidence": 0.8
+  },
+  "reasoning": "AENT is the worst performer in the portfolio at -6.2% and represents 12.2% of portfolio value. Trimming this position reduces exposure to underperforming assets and frees capital for higher-conviction opportunities. The company's fundamentals show declining revenue and margins, justifying reduction.",
+  "quantity": 9.0
+}

@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Valhalla Capital — Login{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h2 class="page-header__title">Authentication Required</h2>
+    <p class="page-header__desc">Enter your credentials to access the full terminal</p>
+</div>
+
+<div class="login-container">
+    {% if error %}
+    <div class="login-error">{{ error }}</div>
+    {% endif %}
+
+    <form class="login-form" method="POST" action="/login" autocomplete="off">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <div class="login-form__field">
+            <label class="login-form__label" for="password">PASSWORD</label>
+            <input class="login-form__input"
+                   type="password"
+                   id="password"
+                   name="password"
+                   placeholder="Enter owner password"
+                   required
+                   autofocus>
+        </div>
+        <button class="login-form__submit" type="submit">Authenticate</button>
+    </form>
+
+    <p class="login-hint">Public visitors can browse the dashboard in read-only mode.</p>
+</div>
+
+<style>
+.login-container {
+    max-width: 24rem;
+    margin: 2rem auto;
+}
+.login-error {
+    background: rgba(var(--red-rgb, 220,50,50), 0.15);
+    border: 1px solid var(--status-86d, #e74c3c);
+    color: var(--status-86d, #e74c3c);
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.login-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+.login-form__label {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+}
+.login-form__input {
+    background: var(--bg-card, #1a1a2e);
+    border: 1px solid var(--border, #333);
+    color: var(--text, #e0e0e0);
+    padding: 0.6rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+.login-form__input:focus {
+    outline: none;
+    border-color: var(--accent, #7b68ee);
+}
+.login-form__submit {
+    background: var(--accent, #7b68ee);
+    color: var(--bg, #0f0f1a);
+    border: none;
+    padding: 0.6rem 1rem;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+}
+.login-form__submit:hover {
+    opacity: 0.9;
+}
+.login-hint {
+    margin-top: 1.5rem;
+    font-size: 0.75rem;
+    opacity: 0.4;
+    text-align: center;
+}
+</style>
+
+{% endblock %}

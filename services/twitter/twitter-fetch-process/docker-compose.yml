@@ -1,0 +1,162 @@
+services:
+  # ===== NITTER SERVICES =====
+  nitter-redis:
+    image: redis:7-alpine
+    container_name: nitter-redis
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - nitter-redis-data:/data
+    networks:
+      - nitter-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  nitter:
+    image: zedeus/nitter:latest
+    container_name: nitter
+    volumes:
+      - ./config/nitter/nitter.conf:/src/nitter.conf:ro
+      - ./config/nitter/sessions.jsonl:/src/sessions.jsonl:ro
+    ports:
+      - "127.0.0.1:8080:8080"
+    networks:
+      - nitter-network
+      - processing-network
+    depends_on:
+      nitter-redis:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "-O", "/dev/null", "http://127.0.0.1:8080/search"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  # ===== MINIFLUX SERVICES =====
+  miniflux-db:
+    image: postgres:16-alpine
+    container_name: miniflux-db
+    environment:
+      POSTGRES_USER: miniflux
+      POSTGRES_PASSWORD: ${MINIFLUX_DB_PASSWORD}
+      POSTGRES_DB: miniflux
+    volumes:
+      - miniflux-db-data:/var/lib/postgresql/data
+    networks:
+      - miniflux-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "miniflux"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  miniflux:
+    image: miniflux/miniflux:2.2.5
+    container_name: miniflux
+    environment:
+      - DATABASE_URL=postgres://miniflux:${MINIFLUX_DB_PASSWORD}@miniflux-db/miniflux?sslmode=disable
+      - RUN_MIGRATIONS=1
+      - CREATE_ADMIN=1
+      - ADMIN_USERNAME=${MINIFLUX_ADMIN_USER:-admin}
+      - ADMIN_PASSWORD=${MINIFLUX_ADMIN_PASSWORD}
+    ports:
+      - "127.0.0.1:8081:8080"
+    networks:
+      - miniflux-network
+      - processing-network
+    depends_on:
+      miniflux-db:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "/usr/bin/miniflux", "-healthcheck", "auto"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+
+  # ===== PROCESSING DATABASE =====
+  processing-db:
+    image: postgres:16-alpine
+    container_name: processing-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${PROCESSING_DB_PASSWORD}
+      POSTGRES_DB: twitter_data
+    volumes:
+      - processing-db-data:/var/lib/postgresql/data
+    networks:
+      - processing-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ===== SCRAPER SERVICE =====
+  scraper:
+    build:
+      context: ./scraper
+      dockerfile: Dockerfile
+    container_name: scraper
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MINIFLUX_URL=http://miniflux:8080
+      - MINIFLUX_API_KEY=${MINIFLUX_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - NITTER_URL=http://nitter:8080
+      - DB_HOST=processing-db
+      - DB_PORT=5432
+      - DB_NAME=twitter_data
+      - DB_USER=postgres
+      - DB_PASSWORD=${PROCESSING_DB_PASSWORD}
+      - PROCESS_INTERVAL=300
+      - BATCH_SIZE=100
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - LLM_MODEL=${LLM_MODEL:-}
+    ports:
+      - "0.0.0.0:8082:8082"
+    volumes:
+      - scraper-state:/app/state
+    networks:
+      - processing-network
+    depends_on:
+      miniflux:
+        condition: service_healthy
+      processing-db:
+        condition: service_healthy
+      nitter:
+        condition: service_healthy
+    restart: unless-stopped
+    command: python main.py
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; r=requests.get('http://localhost:8082/health'); exit(0 if r.ok else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  nitter-network:
+    driver: bridge
+  miniflux-network:
+    driver: bridge
+  processing-network:
+    driver: bridge
+
+volumes:
+  nitter-redis-data:
+    driver: local
+  miniflux-db-data:
+    driver: local
+  processing-db-data:
+    driver: local
+  scraper-state:
+    driver: local

@@ -1,0 +1,24 @@
+[Unit]
+Description=Yellowbrick Pitch Scraper
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/valhalla/services/yellowbrick/yellowbrick-fetch-process
+Environment="PLAYWRIGHT_BROWSERS_PATH=/opt/valhalla/services/yellowbrick/yellowbrick-fetch-process/.playwright-browsers"
+ExecStart=/opt/valhalla/services/yellowbrick/yellowbrick-fetch-process/run_scraper.sh
+User=scraper
+Group=scraper
+
+# Security hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/valhalla/services/yellowbrick/yellowbrick-fetch-process/data /opt/valhalla/services/yellowbrick/yellowbrick-fetch-process/logs
+PrivateTmp=yes
+
+# Timeout (playwright browser operations)
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target

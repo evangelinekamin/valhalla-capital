@@ -1,0 +1,14 @@
+{
+  "request_id": "fd1e6ae4-0385-4114-a9bd-cd4d659640ef",
+  "timestamp": "2026-05-19T14:03:50.519437",
+  "ticker": "GPN",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.7
+  },
+  "reasoning": "GPN is currently at 14.0% of portfolio weight, approaching the maximum position size limit of 20%. Trimming this position reduces concentration risk and frees capital for higher-conviction opportunities like PEW, while maintaining some exposure to the value opportunity.",
+  "quantity": 1.0
+}

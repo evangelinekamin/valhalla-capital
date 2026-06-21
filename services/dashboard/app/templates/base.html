@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Valhalla Capital{% endblock %}</title>
+    <link rel="icon" href="{{ asset_url('favicon.svg') }}" type="image/svg+xml">
+    <link rel="stylesheet" href="{{ asset_url('style.css') }}">
+    <script src="{{ asset_url('vendor/htmx-2.0.4.min.js') }}" defer></script>
+    <script src="{{ asset_url('app.js') }}" defer></script>
+    <meta name="htmx-config" content='{"defaultSwapStyle":"innerHTML"}'>
+</head>
+<body class="booting">
+    <div class="shell">
+
+        <header class="header">
+            <div>
+                <h1 class="header__title"><span>Valhalla</span> Capital</h1>
+                <p class="header__subtitle">{{ config.app_subtitle }}</p>
+                <p class="header__quote">“{{ get_quote() }}”</p>
+            </div>
+            <div class="header__meta">
+                {% if is_owner is defined and is_owner %}
+                <form method="POST" action="/logout" style="display:inline;">
+                    <button type="submit" class="header__auth" title="Sign out">&#9632; owner</button>
+                </form>
+                {% else %}
+                <a href="/login" class="header__auth" title="Sign in">&#9656; login</a>
+                {% endif %}
+                <span class="pulse"></span>
+                <span id="clock" class="mono"></span>
+            </div>
+        </header>
+
+        {% if nav is defined %}
+        <nav class="nav">
+            {% for item in nav %}
+            <a href="{{ item.path }}"
+               class="nav__item {% if current_path == item.path %}nav__item--active{% endif %}">
+                <span class="nav__icon">{{ item.icon }}</span>
+                {{ item.label }}
+            </a>
+            {% endfor %}
+        </nav>
+        {% endif %}
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer class="footer">
+            <span>&copy; Valhalla Capital {{ now().year }}</span>
+            <button class="footer__sound-toggle" id="sound-toggle" title="Toggle ambient mode">
+                <span id="sound-icon">&#9835;</span> ambient
+            </button>
+            <span>polling every {{ config.poll_interval }}s</span>
+        </footer>
+
+        <div id="valkyrie-ticker"
+             class="ticker"
+             hx-get="/partials/valkyrie-ticker"
+             hx-trigger="load, every 45s [document.visibilityState === 'visible']"
+             hx-swap="innerHTML">
+            {# Initial content (optional, or wait for load) #}
+            <div class="ticker-content"><div class="ticker-item">Synchronizing with Valkyrie...</div></div>
+        </div>
+
+    </div>
+</body>
+</html>

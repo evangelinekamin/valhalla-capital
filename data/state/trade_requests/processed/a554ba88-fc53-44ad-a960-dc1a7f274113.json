@@ -1,0 +1,14 @@
+{
+  "request_id": "a554ba88-fc53-44ad-a960-dc1a7f274113",
+  "timestamp": "2026-06-08T14:02:08.334963",
+  "ticker": "GRNT",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.95,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -35.0,
+    "confidence": 0.9
+  },
+  "reasoning": "GRNT faces substantial doubt about its ability to continue as a going concern with high debt maturity risk in 2027 and recent auditor change. In the current extreme geopolitical environment with Strait of Hormuz blockade likely to cause oil price volatility and credit market stress, GRNT's high leverage makes it extremely vulnerable. The stock is trading at $4.92, down 2.2% from our cost basis, and the going-concern warning represents an existential risk that violates our risk management principles.",
+  "quantity": 37.0
+}

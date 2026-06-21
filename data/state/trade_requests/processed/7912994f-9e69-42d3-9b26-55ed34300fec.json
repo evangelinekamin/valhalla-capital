@@ -1,0 +1,14 @@
+{
+  "request_id": "7912994f-9e69-42d3-9b26-55ed34300fec",
+  "timestamp": "2026-05-29T14:03:05.196392",
+  "ticker": "SBLK",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 2.5,
+    "expected_loss_pct": -5.0,
+    "confidence": 0.85
+  },
+  "reasoning": "SBLK is our largest position at 19.6% of portfolio, exceeding our 20% maximum but violating our target of ~12.5%. We need to reduce concentration for risk management while maintaining our thesis that SBLK benefits from global trade normalization and shipping demand.",
+  "quantity": 1.0
+}

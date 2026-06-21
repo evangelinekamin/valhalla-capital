@@ -1,0 +1,14 @@
+{
+  "request_id": "6c5e4c0a-67b8-471c-9c69-4fe02bf961ab",
+  "timestamp": "2026-06-15T14:01:12.805316",
+  "ticker": "SU",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -7.9,
+    "confidence": 0.75
+  },
+  "reasoning": "Geopolitical thesis weakened by conflicting Iran peace deal signals (Trump claims deal Sunday but CNBC reports deal in question as Israel strikes Lebanon). Updated thesis has decreased conviction and lowered target ($70 from $75). Current price ($58.55) is very close to new stop-loss ($57.5), making position highly vulnerable. With unknown earnings date (violates 7-day rule) and -7.9% unrealized loss, risk/reward is unfavorable. Full exit frees capital for higher-conviction opportunities.",
+  "quantity": 1.0
+}

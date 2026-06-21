@@ -1,0 +1,15 @@
+{
+  "request_id": "796ecbee-b9ca-49ca-be5c-bb89c569b9de",
+  "timestamp": "2026-05-29T14:03:40.790753",
+  "ticker": "ROCK",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.85
+  },
+  "reasoning": "ROCK has strong fundamentals with 12% revenue growth, margin expansion, and raised guidance. The substack $100 target represents 2.5x upside and is confirmed by the research showing sustained demand in solar and construction end-markets. We're buying 2 shares to establish a meaningful position while maintaining risk management discipline.",
+  "quantity": 2.0,
+  "kelly_fraction": 0.325
+}

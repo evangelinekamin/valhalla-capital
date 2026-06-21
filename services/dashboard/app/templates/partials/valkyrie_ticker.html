@@ -1,0 +1,24 @@
+<div class="ticker-content">
+    {% if events or status_changes %}
+        {% for change in status_changes %}
+        <div class="ticker-item">
+            <span class="ticker-item__time">{{ format_timestamp(change.time) }}</span>
+            <span class="ticker-item__tag ticker-item__tag--status">STATUS</span>
+            <span class="ticker-item__summary">{{ change.service }}: {{ change.old_status }} &rarr; {{ change.new_status }}</span>
+        </div>
+        {% endfor %}
+        {% for event in events %}
+        <div class="ticker-item">
+            <span class="ticker-item__time">{{ format_timestamp(event.event_time) }}</span>
+            <span class="ticker-item__tag ticker-item__tag--{{ event.event_type|lower }}">{{ event.event_type }}</span>
+            {% if is_owner %}
+            <span class="ticker-item__summary">{{ event.event_text }}</span>
+            {% else %}
+            <span class="ticker-item__summary">{{ event.event_text | ticker_excerpt }}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="ticker-item">Valkyrie is monitoring... no recent events.</div>
+    {% endif %}
+</div>

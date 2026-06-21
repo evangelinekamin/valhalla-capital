@@ -1,0 +1,14 @@
+{
+  "request_id": "6beef781-d1d0-41e7-b8e8-43951a6afffe",
+  "timestamp": "2026-05-18T14:01:19.183350",
+  "ticker": "COGT",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.9
+  },
+  "reasoning": "COGT has no revenue and continues to burn cash ($97M loss in Q1 2026). The thesis of clinical oncology pipeline value has not materialized, and the position has underperformed by -7.7%. With 78 days until next earnings, there's no catalyst to reverse this trend. The position violates our principle of not holding pure burn plays without revenue.",
+  "quantity": 5.0
+}

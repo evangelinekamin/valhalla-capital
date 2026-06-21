@@ -1,0 +1,14 @@
+{
+  "request_id": "29a6811a-76d2-4ab5-9ea0-cc5e73a72510",
+  "timestamp": "2026-05-29T14:02:03.295115",
+  "ticker": "VISN",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.8,
+    "expected_gain_pct": 2.0,
+    "expected_loss_pct": -6.0,
+    "confidence": 0.8
+  },
+  "reasoning": "VISN is our second largest position at 18.0% of portfolio and has concerning financials with negative $1.5B net income in Q1 2026. We need to reduce concentration and address the fundamental weakness while raising cash for better opportunities.",
+  "quantity": 3.0
+}

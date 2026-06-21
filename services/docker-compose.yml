@@ -1,0 +1,261 @@
+name: valhalla
+
+services:
+  # ================== Phase 1: FMP ==================
+  fmp-mysql:
+    image: mysql:8.0
+    container_name: fmp-mysql
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/fmp.env
+    volumes:
+      - /opt/valhalla/data/fmp-mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p\"$$MYSQL_ROOT_PASSWORD\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - valhalla
+
+  fmp-api:
+    build:
+      context: /opt/valhalla/services/fmp/FMP-Access-Library
+      dockerfile: Dockerfile
+    image: valhalla/fmp-api:latest
+    container_name: fmp-api
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/fmp.env
+    environment:
+      MYSQL_HOST: fmp-mysql
+      FMP_MYSQL_HOST: fmp-mysql
+      API_HOST: 0.0.0.0
+    depends_on:
+      fmp-mysql:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fs", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    networks:
+      - valhalla
+
+  # ================== Phase 1: Overseer DB ==================
+  overseer-postgres:
+    image: pgvector/pgvector:pg15
+    container_name: overseer-postgres
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/overseer-pg.env
+    volumes:
+      - /opt/valhalla/data/overseer-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U overseer -d overseer"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - valhalla
+
+  # ================== Phase 2: Trading DB ==================
+  trading-postgres:
+    image: timescale/timescaledb:latest-pg15
+    container_name: trading-postgres
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/trading-pg.env
+    volumes:
+      - /opt/valhalla/data/trading-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U trading -d trading"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - valhalla
+
+  # ================== Phase 2: IBKR Gateway (live mode) ==================
+  ib-gateway:
+    image: ghcr.io/gnzsnz/ib-gateway:stable
+    container_name: ib-gateway
+    restart: unless-stopped
+    env_file:
+      - path: /opt/valhalla/secrets/ibkr-live.env
+        format: raw
+    environment:
+      TWS_ACCEPT_INCOMING: accept
+      READ_ONLY_API: "no"
+    ports:
+      - "<TAILNET_HOST_IP>:5900:5900"
+    volumes:
+      - /opt/valhalla/data/ib-gateway-settings:/root/Jts
+    healthcheck:
+      test: ["CMD", "sh", "-c", "grep -qE ':0FA[34]' /proc/net/tcp"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 240s
+    networks:
+      - valhalla
+
+  # ================== Phase 2: Trading Service ==================
+  trading-service:
+    build:
+      context: /opt/valhalla/services/ibkr/ibkr-trading-gateway
+      dockerfile: Dockerfile
+    image: valhalla/trading-service:latest
+    container_name: trading-service
+    restart: unless-stopped
+    depends_on:
+      ib-gateway:
+        condition: service_healthy
+      trading-postgres:
+        condition: service_healthy
+    env_file:
+      - /opt/valhalla/secrets/trading-pg.env
+    environment:
+      IBKR_HOST: ib-gateway
+      IBKR_PORT: "4003"
+      IBKR_CLIENT_ID: "1"
+      TRADING_MODE: live
+      DATABASE_URL: postgresql://trading:${POSTGRES_PASSWORD}@trading-postgres:5432/trading
+      MAX_POSITION_FRACTION: "0.20"
+      MAX_DAILY_LOSS_PCT: "0.03"
+      MIN_POSITION_SIZE_USD: "30"
+      MAX_POSITION_SIZE_USD: "2000"
+      MAX_TRADES_PER_DAY: "10"
+      MAX_TRADES_PER_WEEK: "30"
+      INITIAL_PORTFOLIO_VALUE: "1000"
+      DRY_RUN_MODE: "false"
+      DISCORD_WEBHOOK_URL: ""
+    volumes:
+      - /opt/valhalla/data/trading-shared:/shared
+      - /opt/valhalla/data/trading-data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "/health_check.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - valhalla
+
+  # ================== Phase 3: Twitter pipeline ==================
+  miniflux-db:
+    image: postgres:16-alpine
+    container_name: miniflux-db
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/miniflux-db.env
+    volumes:
+      - /opt/valhalla/data/miniflux-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "miniflux"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - valhalla
+
+  miniflux:
+    image: miniflux/miniflux:2.2.5
+    container_name: miniflux
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/miniflux.env
+    extra_hosts:
+      # Pi via tailnet — alias as both nitter-proxy (legacy feed URLs in DB)
+      # and nitter-pi (new). <TAILNET_PI_IP> is the Pi's stable tailnet IP.
+      - "nitter-proxy:<TAILNET_PI_IP>"
+      - "nitter-pi:<TAILNET_PI_IP>"
+    ports:
+      - "<TAILNET_HOST_IP>:8081:8080"
+    depends_on:
+      miniflux-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "/usr/bin/miniflux", "-healthcheck", "auto"]
+      interval: 60s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
+    networks:
+      - valhalla
+
+  processing-db:
+    image: postgres:16-alpine
+    container_name: processing-db
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/processing-db.env
+    volumes:
+      - /opt/valhalla/data/processing-db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - valhalla
+
+  scraper:
+    build:
+      context: /opt/valhalla/services/twitter/twitter-fetch-process/scraper
+      dockerfile: Dockerfile
+    image: valhalla/scraper:latest
+    container_name: scraper
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/scraper.env
+    extra_hosts:
+      - "nitter-pi:<TAILNET_PI_IP>"
+    environment:
+      MINIFLUX_URL: http://miniflux:8080
+      NITTER_URL: http://nitter-pi:8090
+      DB_HOST: processing-db
+      DB_PORT: "5432"
+      DB_NAME: twitter_data
+      DB_USER: postgres
+      PROCESS_INTERVAL: "300"
+      PYTHONUNBUFFERED: "1"
+    depends_on:
+      miniflux:
+        condition: service_healthy
+      processing-db:
+        condition: service_healthy
+    networks:
+      - valhalla
+
+  # ================== Phase 4: Overseer agent ==================
+  overseer:
+    image: valhalla/overseer:latest
+    container_name: overseer
+    restart: unless-stopped
+    env_file:
+      - /opt/valhalla/secrets/overseer-app.env
+    volumes:
+      - /opt/valhalla/secrets/valhalla_key:/secrets/valhalla_key:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      overseer-postgres:
+        condition: service_healthy
+      fmp-api:
+        condition: service_healthy
+      ib-gateway:
+        condition: service_healthy
+    networks:
+      - valhalla
+
+networks:
+  valhalla:
+    name: valhalla
+    driver: bridge

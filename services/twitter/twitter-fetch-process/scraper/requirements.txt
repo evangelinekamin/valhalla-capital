@@ -1,0 +1,18 @@
+# Database
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.25
+
+# HTTP client
+requests==2.31.0
+httpx>=0.27.0
+
+# LLM (kept for account_tier_bootstrap.py)
+anthropic>=0.40.0
+
+# API
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+pydantic==2.5.3
+
+# Utilities
+python-dotenv==1.0.1

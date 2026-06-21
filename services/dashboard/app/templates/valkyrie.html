@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Valhalla Capital — Valkyrie{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h2 class="page-header__title">
+        <svg class="valkyrie-sigil" viewBox="-5 -10 110 110" xmlns="http://www.w3.org/2000/svg">
+            <path d="m47.91 48s-16.66-0.75-29.84-13.16c0 0.058594 2.2188 24.551 35.441 28.262-8.4414 1.7578-17.234 0.26563-24.621-4.1797l0.17188 0.30078c1.5508 2.6211 11.398 19 33.211 17.102 0 0-8.4297 3.8086-19.551-0.57812 8.4258 11.633 25.547 16.812 40.605 19.254 0.89453 0.14062 1.7891-0.26172 2.2734-1.0273 0.48438-0.76562 0.46875-1.7461-0.042968-2.4922-4.7109-6.7305-12.34-20.789-8.7305-37.68 1.2617-6.168-2.3359-12.293-8.3398-14.191-14.938-4.8477-40.047-15.348-54.488-34.609v3.2812c0.60156 6.9102 5.8516 29.41 33.91 39.719z" fill="currentColor"/>
+        </svg>
+        Valkyrie Review Log
+    </h2>
+    <p class="page-header__desc">Full, untruncated cycle outputs — everything Discord cuts off</p>
+</div>
+
+{% if not is_owner %}
+<div class="empty-state">
+    <div class="empty-state__icon">⟡</div>
+    <h3 class="empty-state__title">Authorized Access Only</h3>
+    <p class="empty-state__desc">
+        Valkyrie's reasoning logs contain proprietary AI strategy outputs and are not publicly available.
+    </p>
+    <p class="empty-state__desc">
+        For access or inquiries, contact
+        <a href="mailto:evangeline@valhallacapital.net" class="contact-link">evangeline@valhallacapital.net</a>
+    </p>
+</div>
+
+{% elif not db_available %}
+<div class="empty-state">
+    <div class="empty-state__icon">⟡</div>
+    <h3 class="empty-state__title">Overseer DB not connected</h3>
+    <p class="empty-state__desc">
+        The dashboard can't reach PostgreSQL on <LAN_IP> yet.
+        To set this up:
+    </p>
+    <pre class="empty-state__code">
+# On the overseer LXC (249), add to pg_hba.conf:
+host  overseer  readonly  <LAN_IP>/32  md5
+
+# Create the read-only user:
+CREATE USER readonly WITH PASSWORD 'your_password';
+GRANT CONNECT ON DATABASE overseer TO readonly;
+GRANT USAGE ON SCHEMA public TO readonly;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO readonly;
+
+# Then set OVERSEER_DB_PASSWORD in the dashboard's .env</pre>
+</div>
+
+{% else %}
+
+{# Filters #}
+{% if cycle_types %}
+<div class="filters">
+    <span class="filters__label">Filter:</span>
+    <a href="/valkyrie"
+       class="filters__tag {% if not cycle_type %}filters__tag--active{% endif %}">All</a>
+    {% for ct in cycle_types %}
+    <a href="/valkyrie?cycle_type={{ ct }}"
+       class="filters__tag {% if cycle_type == ct %}filters__tag--active{% endif %}">{{ ct }}</a>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div id="valkyrie-content"
+     hx-get="/partials/valkyrie-logs?page={{ page }}&per_page={{ per_page }}{% if cycle_type %}&cycle_type={{ cycle_type }}{% endif %}"
+     hx-trigger="every 60s [document.visibilityState === 'visible']"
+     hx-swap="innerHTML swap:150ms">
+
+    {% include "partials/valkyrie_logs.html" %}
+
+</div>
+
+{% endif %}
+
+{% endblock %}

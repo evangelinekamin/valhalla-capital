@@ -1,0 +1,15 @@
+{
+  "request_id": "93cece78-faa5-407d-85ce-282a482efbd7",
+  "timestamp": "2026-05-26T14:02:10.838685",
+  "ticker": "SBLK",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 30.0,
+    "expected_loss_pct": -12.0,
+    "confidence": 0.85
+  },
+  "reasoning": "SBLK is the top watchlist candidate from Yellowbrick - Star Bulk Carriers with 145-vessel dry bulk fleet, scrap value $975M > gross debt $951M, high operating leverage. This provides perfect portfolio diversification away from energy exposure and geopolitical risk. With the Strait of Hormuz reopening, shipping sector could benefit from increased trade flows. Current portfolio needs sector diversification away from oil exposure.",
+  "quantity": 7.0,
+  "kelly_fraction": 0.325
+}

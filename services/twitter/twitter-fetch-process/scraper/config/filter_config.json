@@ -1,0 +1,58 @@
+{
+  "skip_patterns": {
+    "retweets": ["^RT @", "RT @"],
+    "spam": [
+      "follow me",
+      "check out my",
+      "link in bio",
+      "click here",
+      "dm me",
+      "free giveaway",
+      "win prizes",
+      "subscribe to",
+      "join my discord",
+      "telegram group"
+    ],
+    "memes": [
+      "🚀🚀🚀",
+      "🔥🔥🔥",
+      "💎🙌",
+      "wen moon",
+      "to the moon",
+      "hodl"
+    ],
+    "promotional": [
+      "buy now",
+      "limited time",
+      "special offer",
+      "exclusive deal",
+      "#ad ",
+      "#sponsored"
+    ],
+    "crypto_spam": [
+      "#cryptocurrency",
+      "#crypto",
+      "#bitcoin",
+      "#ethereum",
+      "moonshot",
+      "100x gem"
+    ]
+  },
+  "text_quality": {
+    "min_length": 20,
+    "max_emoji_count": 5,
+    "max_hashtag_count": 5,
+    "max_url_count": 3,
+    "min_word_count": 5
+  },
+  "url_blocklist": [
+    "bit.ly",
+    "tinyurl.com",
+    "t.co/promo",
+    "linktr.ee",
+    "onlyfans.com"
+  ],
+  "skip_on_all_caps": true,
+  "skip_on_excessive_punctuation": true,
+  "max_repeated_chars": 3
+}

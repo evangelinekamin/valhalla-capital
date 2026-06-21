@@ -1,0 +1,15 @@
+{
+  "request_id": "1ae8acbd-2d6f-4ce9-ac3a-d20b4ae16577",
+  "timestamp": "2026-06-10T14:02:06.306278",
+  "ticker": "OBE",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 26.5,
+    "expected_loss_pct": -18.7,
+    "confidence": 0.75
+  },
+  "reasoning": "OBE is a pure-play Canadian oil producer with strong fundamentals and direct exposure to oil price movements. With Iran-Israel missile exchanges escalating and Strait of Hormuz risk elevated, oil prices have significant upside potential. OBE's current price of $11.07 offers compelling entry point relative to $14.00 target price (26.5% upside) with $9.00 stop loss (18.7% downside). This provides asymmetric risk/reward profile perfectly aligned with our geopolitical energy theme.",
+  "quantity": 15.0,
+  "kelly_fraction": 0.24415094339622637
+}

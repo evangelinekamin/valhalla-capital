@@ -1,0 +1,14 @@
+{
+  "request_id": "fe4f677f-a7d4-47e2-83ec-8d524a0daa76",
+  "timestamp": "2026-06-03T14:02:22.193340",
+  "ticker": "POOL",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.58,
+    "expected_gain_pct": 8.0,
+    "expected_loss_pct": -6.0,
+    "confidence": 0.62
+  },
+  "reasoning": "POOL is the largest portfolio position at 18.8% and requires risk management. With +1.4% performance and unknown earnings date, selling 1 share reduces concentration while generating cash. The cash will be redeployed to higher-conviction opportunities aligned with current geopolitical risks (energy) and sector rotation (insurance). This addresses both cash constraint and position sizing discipline.",
+  "quantity": 1.0
+}

@@ -1,0 +1,14 @@
+{
+  "request_id": "409f5a76-39a9-48f3-80ee-363b96bfd234",
+  "timestamp": "2026-06-02T14:02:17.555042",
+  "ticker": "RILY",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.8
+  },
+  "reasoning": "RILY has performed exceptionally well (+26.0% unrealized PnL) and represents the largest source of portfolio alpha. Selling 3 shares (42.9% of position) will generate approximately $29.31 in cash, increasing portfolio cash from 3.8% to ~7.0% and reducing concentration risk while maintaining exposure to this strong performer. This aligns with the portfolio rebalancing imperative and meets the minimum trade size requirement.",
+  "quantity": 3.0
+}

@@ -1,0 +1,15 @@
+{
+  "request_id": "d1be0042-a3b7-4202-8dd9-700830c5319e",
+  "timestamp": "2026-05-28T14:03:38.747735",
+  "ticker": "VISN",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 13.8,
+    "expected_loss_pct": -5.0,
+    "confidence": 0.85
+  },
+  "reasoning": "VISN is trading at $12.32, well below its $14 target price from Substack. The company is a communications infrastructure provider with strong fundamentals ($471.8M revenue in Q1 2026) and benefits from the DOCSIS 4.0 upgrade tailwind. This represents an attractive entry point with asymmetric risk/reward.",
+  "quantity": 14.0,
+  "kelly_fraction": 0.32971014492753625
+}

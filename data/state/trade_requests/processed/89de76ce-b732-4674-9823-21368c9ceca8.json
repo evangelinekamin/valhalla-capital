@@ -1,0 +1,14 @@
+{
+  "request_id": "89de76ce-b732-4674-9823-21368c9ceca8",
+  "timestamp": "2026-05-04T14:05:06.626913",
+  "ticker": "TBPH",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 3.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.7
+  },
+  "reasoning": "TBPH is identified as a 'stub' position in the data synthesis and should be exited to free up capital for higher-conviction opportunities. The position is relatively small (6.5% of portfolio) and lacks a clear, active thesis. Capital should be redeployed to oil crisis opportunities like OBE which have stronger catalysts and upside potential.",
+  "quantity": 4.0
+}

@@ -1,0 +1,14 @@
+{
+  "request_id": "9a93aa6b-a628-4452-a18e-9c4d90717db1",
+  "timestamp": "2026-05-21T16:03:22.048149",
+  "ticker": "AENT",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 2.0,
+    "expected_loss_pct": -3.0,
+    "confidence": 0.7
+  },
+  "reasoning": "Trimming 5 shares of AENT (55% of position) to raise cash for portfolio optimization. Portfolio in crisis with -11.26% alpha underperformance, minimal cash (2.3%) limiting deployment options. AENT approaching stop-loss $5.95 at $6.13, unclear earnings date, underperforming. Cash raised can be deployed to higher-conviction opportunities.",
+  "quantity": 5.0
+}

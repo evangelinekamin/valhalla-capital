@@ -1,0 +1,14 @@
+{
+  "request_id": "e9784052-ff5e-497c-b792-f36bebfead66",
+  "timestamp": "2026-05-28T14:01:36.989755",
+  "ticker": "ESTA",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -5.0,
+    "confidence": 0.95
+  },
+  "reasoning": "ESTA has breached its stop-loss of $180.00, with current price at $71.995. The stop-loss breach triggers the default action to sell unless overwhelming new fundamental evidence is found. No such evidence has been identified in current analysis. The thesis has been invalidated by price action approaching the stop-loss level, and the position should be exited to preserve capital.",
+  "quantity": 2.0
+}

@@ -1,0 +1,14 @@
+{
+  "request_id": "9fb1e500-8f17-41b6-88d2-e22ff214cba7",
+  "timestamp": "2026-05-07T14:01:16.867194",
+  "ticker": "BMI",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -0.01,
+    "confidence": 0.9
+  },
+  "reasoning": "BMI is 24.2% of portfolio, exceeding our 20% hard limit. This creates unacceptable concentration risk. Trimming 1 share reduces exposure to ~12.5% while maintaining thesis position.",
+  "quantity": 1.0
+}

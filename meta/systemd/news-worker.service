@@ -1,0 +1,31 @@
+[Unit]
+Description=Financial News Worker - RSS Feed Monitor
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/valhalla/services/news/news-fetch-process
+ExecStart=/opt/valhalla/services/news/news-fetch-process/venv/bin/python scripts/news_worker.py
+Restart=on-failure
+RestartSec=30
+
+# Ensure print output is flushed to logs immediately
+Environment=PYTHONUNBUFFERED=1
+Environment=OPENROUTER_API_KEY=<set-via-EnvironmentFile>
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/valhalla/services/news/news-fetch-process/alerts /opt/valhalla/services/news/news-fetch-process/data
+ProtectHome=read-only
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=news-worker
+
+[Install]
+WantedBy=multi-user.target

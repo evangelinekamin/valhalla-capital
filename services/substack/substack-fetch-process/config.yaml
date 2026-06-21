@@ -1,0 +1,77 @@
+# Newsletter Processing Pipeline Configuration
+
+# Model Backend Configuration
+# Options: anthropic, ollama, llamacpp
+model:
+  backend: openrouter  # Options: openrouter, anthropic, ollama, llamacpp
+
+  # OpenRouter settings (when backend=openrouter)
+  openrouter:
+    model: openai/gpt-oss-120b         # Default model for all stages
+    vision_model: google/gemma-3-12b-it # Cheap vision model for chart/table descriptions
+    extraction_model: openai/gpt-oss-120b  # Extraction model ($0.039/M in, $0.156/M out)
+    api_key: null  # Leave null to use OPENROUTER_API_KEY environment variable
+
+  # Anthropic settings (when backend=anthropic)
+  anthropic:
+    model: claude-sonnet-4-6       # Default model for all stages
+    vision_model: claude-haiku-4-5-20251001  # Cheaper model for image descriptions
+    extraction_model: claude-sonnet-4-6  # Full reasoning for data extraction
+    api_key: null  # Leave null to use ANTHROPIC_API_KEY environment variable
+
+  # Ollama settings (when backend=ollama)
+  ollama:
+    model: llama3.2-vision  # Vision-capable model for image processing
+    text_model: llama3.2    # Optional: separate model for text-only tasks
+    base_url: http://localhost:11434
+
+  # llama.cpp settings (when backend=llamacpp)
+  llamacpp:
+    model: llava
+    base_url: http://localhost:8080
+
+# Database Configuration
+database:
+  path: newsletters.db
+
+# Gmail Configuration
+gmail:
+  query: "from:substack.com OR from:<OWNER_EMAIL> OR from:<OWNER_EMAIL>"
+  max_results: 50               # Max results for initial fetch
+  credentials_path: credentials.json  # OAuth app credentials
+  token_path: token.json              # Cached user OAuth token
+  # Allowed sender domains/addresses for the incremental sync filter
+  sender_whitelist:
+    - substack.com
+    - <OWNER_EMAIL>
+    - <OWNER_EMAIL>
+
+# Image Processing
+images:
+  directory: images
+  download_timeout: 10  # seconds
+
+# Pipeline Settings
+pipeline:
+  batch_size: 10        # Number of items to process per batch
+  max_batches: null     # Limit batches for testing (null = unlimited)
+  rate_limit_delay: 1   # Seconds to wait between batches
+
+# Output Settings
+output:
+  newsletter_data: newsletter_data.json
+  ticker_history: ticker_history.json
+
+# Logging
+logging:
+  level: INFO           # DEBUG, INFO, WARNING, ERROR
+  file: pipeline.log    # null to disable file logging
+
+# Discord Error Monitoring
+discord:
+  enabled: true         # Enable/disable Discord notifications
+  webhook_url: null     # Leave null to use DISCORD_WEBHOOK_URL environment variable
+  notify_on_error: true     # Send notifications for errors
+  notify_on_warning: false  # Send notifications for warnings
+  notify_on_start: false    # Send notification when pipeline starts
+  notify_on_complete: false # Send notification when pipeline completes

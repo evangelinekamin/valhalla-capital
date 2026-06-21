@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %}Valhalla Capital — Trades{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+    <h2 class="page-header__title">Trade History</h2>
+    <p class="page-header__desc">Execution log and portfolio state from IBKR</p>
+</div>
+
+{% if not is_owner %}
+<div class="empty-state">
+    <div class="empty-state__icon">△</div>
+    <h3 class="empty-state__title">Authorized Access Only</h3>
+    <p class="empty-state__desc">
+        Portfolio holdings and trade execution data are not publicly available.
+    </p>
+    <p class="empty-state__desc">
+        For access or inquiries, contact
+        <a href="mailto:evangeline@valhallacapital.net" class="contact-link">evangeline@valhallacapital.net</a>
+    </p>
+</div>
+
+{% elif not db_available %}
+<div class="empty-state">
+    <div class="empty-state__icon">△</div>
+    <h3 class="empty-state__title">Trading DB not connected</h3>
+    <p class="empty-state__desc">
+        The dashboard can't reach PostgreSQL on <LAN_IP> yet.
+        Same pattern as the overseer — add a read-only user and
+        allow connections from 250 in pg_hba.conf.
+    </p>
+</div>
+
+{% else %}
+
+{% set has_pnl = portfolio_history and portfolio_history.get('pnl', [])|length > 1 %}
+{% set has_snapshots = portfolio_snapshots and portfolio_snapshots|length > 1 %}
+{% set show_chart = has_pnl or has_snapshots %}
+
+{# Portfolio overview — chart + holdings side by side #}
+<div class="portfolio-overview">
+    {# Holdings table #}
+    {% if portfolio %}
+    <section class="portfolio-holdings">
+        <h3 class="group__label">Current Holdings</h3>
+        {% if portfolio.get('positions') %}
+        <div class="holdings-table">
+            <div class="holdings-header">
+                <span>Ticker</span>
+                <span>Qty</span>
+                <span>Avg</span>
+                <span>P&L</span>
+            </div>
+            {% for pos in portfolio['positions'] %}
+            <div class="holdings-row">
+                <span class="trade-row__ticker">{{ pos.get('ticker', pos.get('symbol', '—')) }}</span>
+                <span class="mono">{{ pos.get('quantity', '—') }}</span>
+                <span class="mono">${{ "%.2f"|format(pos['avg_price']) if pos.get('avg_price') else '—' }}</span>
+                <span class="mono {% if pos.get('unrealized_pnl', 0) >= 0 %}text-served{% else %}text-86d{% endif %}">
+                    {{ "$%.2f"|format(pos['unrealized_pnl']) if pos.get('unrealized_pnl') is not none else '—' }}
+                </span>
+            </div>
+            {% endfor %}
+            {% if cash_info and cash_info.cash > 0 %}
+            <div class="holdings-row" style="border-top: 1px solid var(--border); margin-top: 0.25rem; padding-top: 0.25rem;">
+                <span class="trade-row__ticker" style="opacity: 0.7;">CASH</span>
+                <span class="mono" style="opacity: 0.5;">—</span>
+                <span class="mono" style="opacity: 0.5;">—</span>
+                <span class="mono">${{ "%.2f"|format(cash_info.cash) }}</span>
+            </div>
+            {% endif %}
+            {% set positions_value = namespace(total=0.0) %}
+            {% for pos in portfolio['positions'] %}
+                {% if pos.get('market_value') %}
+                    {% set positions_value.total = positions_value.total + pos.market_value %}
+                {% endif %}
+            {% endfor %}
+            {% set cash_val = cash_info.cash if cash_info else 0 %}
+            {% set total_val = positions_value.total + cash_val %}
+            {% if total_val > 0 %}
+            <div class="holdings-row" style="border-top: 1px solid var(--border); margin-top: 0.25rem; padding-top: 0.35rem;">
+                <span style="font-weight: 600; opacity: 0.9;">Total</span>
+                <span></span>
+                <span></span>
+                <span class="mono" style="font-weight: 600;">${{ "%.2f"|format(total_val) }}</span>
+            </div>
+            {% endif %}
+            {% if cash_info and cash_info.updated_at %}
+            <div style="font-size: 0.7rem; opacity: 0.4; margin-top: 0.35rem; text-align: right;">
+                IBKR data {{ time_ago(cash_info.updated_at) }}
+            </div>
+            {% endif %}
+        </div>
+        {% else %}
+        <p class="text-muted" style="padding: 0.5rem 0;">No open positions.</p>
+        {% endif %}
+    </section>
+    {% endif %}
+
+    {# Portfolio value chart #}
+    {% if show_chart %}
+    <section class="chart-section">
+        <div class="chart-toggle">
+            <button type="button" class="chart-toggle__btn chart-toggle__btn--active" data-chart-mode="value">Portfolio Value</button>
+            <button type="button" class="chart-toggle__btn" data-chart-mode="pnl">P&L</button>
+        </div>
+        <div class="chart-container"
+             id="portfolio-chart"
+             data-portfolio-chart
+             data-series="{{ portfolio_history | tojson | forceescape }}"
+             data-snapshots="{{ portfolio_snapshots | tojson | forceescape }}"></div>
+    </section>
+    {% endif %}
+</div>
+
+{# Trade log #}
+<section style="margin-top: 2rem;">
+    <h3 class="group__label">Trade Log</h3>
+
+    {% if ticker %}
+    <div class="filters">
+        <span class="filters__label">Filtering:</span>
+        <span class="filters__tag filters__tag--active">{{ ticker }}</span>
+        <a href="/trades" class="filters__clear">&times; clear</a>
+    </div>
+    {% endif %}
+
+    {% if trades %}
+    <div class="col-headers col-headers--trades">
+        <span>Time</span>
+        <span>Ticker</span>
+        <span>Action</span>
+        <span>Qty</span>
+        <span>Price</span>
+        <span>Status</span>
+    </div>
+    {% for trade in trades %}
+    <div class="trade-row{% if trade.get('reasoning') %} trade-row--expandable{% endif %}">
+        <span class="trade-row__time">{{ format_timestamp(trade.get('timestamp', trade.get('created_at'))) }}</span>
+        <a href="/trades?ticker={{ trade.get('ticker', trade.get('symbol', '')) }}" class="trade-row__ticker">{{ trade.get('ticker', trade.get('symbol', '—')) }}</a>
+        <span class="trade-row__action trade-row__action--{{ trade.get('action', '')|lower }}">
+            {{ trade.get('action', '—') }}
+        </span>
+        <span class="mono">{{ trade.get('quantity', '—') }}</span>
+        <span class="mono">${{ "%.2f"|format(trade['price']) if trade.get('price') else '—' }}</span>
+        <span class="trade-row__status">{{ trade.get('status', '—') }}</span>
+    </div>
+    {% if trade.get('reasoning') %}
+    <div class="trade-row__reasoning trade-row__reasoning--preview">{{ trade['reasoning'][:200] }}{% if trade['reasoning']|length > 200 %}...{% endif %}</div>
+    <div class="trade-row__reasoning trade-row__reasoning--full">{{ trade['reasoning'] }}</div>
+    {% endif %}
+    {% endfor %}
+
+    <div class="pagination">
+        {% if page > 1 %}
+        <a href="/trades?page={{ page - 1 }}&per_page={{ per_page }}{% if ticker %}&ticker={{ ticker }}{% endif %}"
+           class="pagination__link">&larr; Newer</a>
+        {% endif %}
+        <span class="pagination__info">Page {{ page }}</span>
+        {% if trades|length == per_page %}
+        <a href="/trades?page={{ page + 1 }}&per_page={{ per_page }}{% if ticker %}&ticker={{ ticker }}{% endif %}"
+           class="pagination__link">Older &rarr;</a>
+        {% endif %}
+    </div>
+
+    {% else %}
+    <div class="empty-state empty-state--inline">
+        <p class="empty-state__desc">No trades found{% if ticker %} for {{ ticker }}{% endif %}.</p>
+    </div>
+    {% endif %}
+</section>
+
+{% endif %}
+
+{% endblock %}

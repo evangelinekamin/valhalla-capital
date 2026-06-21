@@ -1,0 +1,15 @@
+{
+  "request_id": "92c25cd0-bf5b-49d1-af44-9ef18b053e60",
+  "timestamp": "2026-05-04T14:03:49.080030",
+  "ticker": "OBE",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 60.0,
+    "expected_loss_pct": -30.0,
+    "confidence": 0.8
+  },
+  "reasoning": "OBE is a small-cap oil producer with significant upside in the current oil crisis. Current price $14.19 is near 52-week high, and the company benefits directly from high oil prices. As a Western Canada producer, it has low breakeven costs and high operating leverage to oil prices. Market cap of $955M makes it highly responsive to oil price moves. Position sized to 12.3% of portfolio to align with oil crisis priority and available cash.",
+  "quantity": 9.0,
+  "kelly_fraction": 0.3125
+}

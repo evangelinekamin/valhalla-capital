@@ -1,0 +1,73 @@
+{
+  "id": 126819,
+  "url": "https://www.joinyellowbrick.com/pitch/dbo-to-investment-memo",
+  "updatedAt": "2026-01-28T04:42:54.907451+00:00",
+  "condensedText": "D-BOX Technologies Inc. is a Canadian company specializing in haptic technology for entertainment. The company has shown consistent revenue growth and improving margins. We believe the stock is significantly undervalued relative to its growth potential.",
+  "dateOriginal": "2025-12-05",
+  "dateRetrieved": "2025-12-10",
+  "priceTarget": 2.62,
+  "sentiment": "bullish",
+  "source": "FUND LETTER",
+  "title": "Investment Memorandum: D-BOX Technologies Inc. (DBO)",
+  "wordCount": 16321,
+  "readTime": 55,
+  "oneLinerText": "Undervalued haptic technology company with strong growth potential",
+  "category": "growth",
+  "givenUpsidePct": 215.66,
+  "currentUpside": 164.65,
+  "givenTicker": "DBO.TO",
+  "isHidden": false,
+  "isAnonymous": false,
+  "author": {
+    "id": "sohra_peak",
+    "authorName": "Sohra Peak",
+    "authorBio": "Sohra Peak Capital is a value-oriented investment fund focused on small-cap opportunities.",
+    "twitter": "@JonCukierwar",
+    "baseUrl": "https://sohrapeakcapital.com",
+    "authorReturns": {
+      "oneMonthReturn": -0.0026666666666666666,
+      "threeMonthReturn": 0.03142857142857143,
+      "oneYearReturn": 0.2978571428571429
+    },
+    "isTopAuthor": true,
+    "isProfessional": true
+  },
+  "company": {
+    "companyId": 694567,
+    "companyName": "D-BOX Technologies Inc.",
+    "isoCountryCode": "CA",
+    "exchangeSymbol": "TSX",
+    "tickerSymbol": "DBO",
+    "currencyCode": "CAD",
+    "businessDescription": "D-BOX Technologies Inc. designs, manufactures, and commercializes motion systems for entertainment applications.",
+    "simpleIndustryDescription": "Household Durables",
+    "companyData": {
+      "averageVolume": 390282,
+      "cashAndEquivalents": 10606000,
+      "ebitda": 12738000,
+      "grossProfit": 27562000,
+      "lastClose52WeekHigh": 1.0,
+      "lastClose52WeekLow": 0.125,
+      "lastCloseMarketCap": 220471257,
+      "lastClosePrice": 0.99,
+      "lastClosePriceBookValue": 9.555154,
+      "lastClosePriceEarnings": 25.747724,
+      "lastCloseTev": 214028257,
+      "lastCloseTevEbitda": 16.802343,
+      "operatingIncome": 10950000,
+      "returnOnEquityPercent": 47.208,
+      "totalDebt": 4163000,
+      "totalEquity": 23054000,
+      "totalRevenues": 51054000
+    }
+  },
+  "returns": {
+    "originalPrice": 0.83,
+    "currentPrice": 0.99,
+    "oneMonthReturn": 0.06,
+    "threeMonthReturn": 0.12,
+    "sixMonthReturn": 0.25,
+    "oneYearReturn": 0.45,
+    "currentReturn": 0.1928
+  }
+}

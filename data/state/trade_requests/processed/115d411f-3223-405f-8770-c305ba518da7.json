@@ -1,0 +1,14 @@
+{
+  "request_id": "115d411f-3223-405f-8770-c305ba518da7",
+  "timestamp": "2026-06-15T14:01:05.750974",
+  "ticker": "OBE",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -7.1,
+    "confidence": 0.75
+  },
+  "reasoning": "Geopolitical thesis weakened by conflicting Iran peace deal signals (Trump claims deal Sunday but CNBC reports deal in question as Israel strikes Lebanon). Updated thesis has decreased conviction and lowered target ($13.5 from $15). With unknown earnings date (violates 7-day rule) and -7.1% unrealized loss, risk/reward is unfavorable. Trimming position frees capital for higher-conviction opportunities while maintaining some exposure to potential upside.",
+  "quantity": 4.0
+}

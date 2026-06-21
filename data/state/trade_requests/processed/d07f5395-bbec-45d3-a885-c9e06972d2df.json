@@ -1,0 +1,14 @@
+{
+  "request_id": "d07f5395-bbec-45d3-a885-c9e06972d2df",
+  "timestamp": "2026-06-11T14:02:08.173902",
+  "ticker": "VISN",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 5.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.75
+  },
+  "reasoning": "VISN's Q1 2026 shows -$1.5B net loss despite $471.8M revenue, suggesting accounting issues. Current price ($12.205) is approaching the updated $13.5 target, and with the thesis weakened and financial concerns, trimming 45% of the position is appropriate risk management.",
+  "quantity": 5.0
+}

@@ -1,0 +1,15 @@
+{
+  "request_id": "d77f9b9a-7406-481c-94aa-5176e547e2be",
+  "timestamp": "2026-05-15T14:02:17.507486",
+  "ticker": "OBE",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 40.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.8
+  },
+  "reasoning": "OBE is the most shorted oil producer (34.1% short interest) with GME-like short squeeze potential if Hormuz tensions escalate. Trading at $13.095 with strong oil leverage thesis intact. Hormuz closure continues with 100M barrels lost weekly per Aramco warning. This represents the highest asymmetric opportunity in the energy sector.",
+  "quantity": 6.0,
+  "kelly_fraction": 0.328125
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "id": 126819,
+    "url": "https://www.joinyellowbrick.com/pitch/dbo-to-investment-memo",
+    "updatedAt": "2026-01-28T04:42:54.907451+00:00",
+    "condensedText": "D-BOX Technologies pitch content.",
+    "dateOriginal": "2025-12-05",
+    "dateRetrieved": "2025-12-10",
+    "priceTarget": 2.62,
+    "sentiment": "bullish",
+    "source": "FUND LETTER",
+    "title": "Investment Memorandum: D-BOX Technologies Inc. (DBO)",
+    "wordCount": 16321,
+    "readTime": 55,
+    "oneLinerText": "Undervalued haptic technology company",
+    "category": "growth",
+    "givenUpsidePct": 215.66,
+    "currentUpside": 164.65,
+    "givenTicker": "DBO.TO",
+    "isHidden": false,
+    "isAnonymous": false,
+    "author": {
+      "id": "sohra_peak",
+      "authorName": "Sohra Peak",
+      "authorBio": "Value fund.",
+      "twitter": "@JonCukierwar",
+      "baseUrl": "https://sohrapeakcapital.com",
+      "authorReturns": null,
+      "isTopAuthor": true,
+      "isProfessional": true
+    },
+    "company": {
+      "companyId": 694567,
+      "companyName": "D-BOX Technologies Inc.",
+      "isoCountryCode": "CA",
+      "exchangeSymbol": "TSX",
+      "tickerSymbol": "DBO",
+      "currencyCode": "CAD",
+      "businessDescription": "Haptic tech company.",
+      "simpleIndustryDescription": "Household Durables",
+      "companyData": {
+        "lastCloseMarketCap": 220471257,
+        "lastClosePrice": 0.99,
+        "lastClosePriceEarnings": 25.747724,
+        "lastCloseTevEbitda": 16.802343
+      }
+    },
+    "returns": {
+      "originalPrice": 0.83,
+      "currentPrice": 0.99,
+      "oneMonthReturn": 0.06,
+      "threeMonthReturn": 0.12,
+      "sixMonthReturn": null,
+      "oneYearReturn": null,
+      "currentReturn": 0.1928
+    }
+  },
+  {
+    "id": 126820,
+    "url": "https://www.joinyellowbrick.com/pitch/googl-analysis",
+    "updatedAt": "2026-01-27T12:00:00.000000+00:00",
+    "condensedText": "Google analysis content.",
+    "dateOriginal": "2026-01-20",
+    "dateRetrieved": "2026-01-22",
+    "priceTarget": 200.0,
+    "sentiment": "bullish",
+    "source": "RESEARCH NOTE",
+    "title": "Alphabet Inc. Deep Dive",
+    "wordCount": 8000,
+    "readTime": 30,
+    "oneLinerText": "Tech giant with AI leadership",
+    "category": "value",
+    "givenUpsidePct": 15.0,
+    "currentUpside": 12.0,
+    "givenTicker": "GOOGL",
+    "isHidden": false,
+    "isAnonymous": false,
+    "author": {
+      "id": "tech_fund",
+      "authorName": "Tech Growth Fund",
+      "authorBio": "Technology focused fund.",
+      "twitter": "@techfund",
+      "baseUrl": "https://techgrowthfund.com",
+      "authorReturns": {
+        "oneMonthReturn": 0.05,
+        "threeMonthReturn": 0.15,
+        "oneYearReturn": 0.35
+      },
+      "isTopAuthor": true,
+      "isProfessional": true
+    },
+    "company": {
+      "companyId": 100001,
+      "companyName": "Alphabet Inc.",
+      "isoCountryCode": "US",
+      "exchangeSymbol": "NASDAQ",
+      "tickerSymbol": "GOOGL",
+      "currencyCode": "USD",
+      "businessDescription": "Technology conglomerate.",
+      "simpleIndustryDescription": "Technology",
+      "companyData": {
+        "lastCloseMarketCap": 2000000000000,
+        "lastClosePrice": 175.0,
+        "lastClosePriceEarnings": 28.5,
+        "lastCloseTevEbitda": 15.2
+      }
+    },
+    "returns": {
+      "originalPrice": 170.0,
+      "currentPrice": 175.0,
+      "oneMonthReturn": 0.029,
+      "threeMonthReturn": 0.08,
+      "sixMonthReturn": 0.12,
+      "oneYearReturn": 0.25,
+      "currentReturn": 0.029
+    }
+  }
+]

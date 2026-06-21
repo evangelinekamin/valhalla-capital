@@ -1,0 +1,15 @@
+{
+  "request_id": "f9437221-00d4-4705-918d-fe25389a69b7",
+  "timestamp": "2026-05-27T14:03:14.026341",
+  "ticker": "PLBY",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 120.0,
+    "expected_loss_pct": -30.0,
+    "confidence": 0.7
+  },
+  "reasoning": "PLBY has a bullish Yellowbrick thesis with 120% upside to $2.90. The company is positioned to benefit from digital media trends and has a strong brand. With current cash of $51.93, buying 38 shares at $1.345 represents appropriate position sizing.",
+  "quantity": 38.0,
+  "kelly_fraction": 0.28125
+}

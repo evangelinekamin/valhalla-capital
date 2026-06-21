@@ -1,0 +1,14 @@
+{
+  "request_id": "d67cbb46-e6e9-472f-9761-6dba04027731",
+  "timestamp": "2026-05-28T14:03:25.051853",
+  "ticker": "RILY",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -3.0,
+    "confidence": 0.8
+  },
+  "reasoning": "RILY has performed exceptionally well (+37.7%), representing 11.0% of the portfolio. To address the portfolio's -11.0% underperformance crisis, we need to deploy capital into new opportunities like VISN and OSB. Trimming 3 shares of RILY will free up approximately $32 to fund these new positions while maintaining a meaningful RILY position.",
+  "quantity": 3.0
+}

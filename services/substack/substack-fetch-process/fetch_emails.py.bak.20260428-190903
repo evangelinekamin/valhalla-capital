@@ -1,0 +1,224 @@
+# fetch_emails.py
+"""Stage 1: Fetch Substack newsletters from Gmail."""
+import base64
+import logging
+import os
+import re
+
+from bs4 import BeautifulSoup
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from googleapiclient.discovery import build
+
+from db_schema import init_db
+from utils import content_hash
+
+logger = logging.getLogger(__name__)
+
+SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+
+
+def get_credentials(token_path='token.json', credentials_path='credentials.json'):
+    """Authenticate with Gmail API via OAuth 2.0."""
+    creds = None
+    if os.path.exists(token_path):
+        creds = Credentials.from_authorized_user_file(token_path, SCOPES)
+
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            try:
+                creds.refresh(Request())
+            except Exception as e:
+                logger.warning(f"Token refresh failed ({e}), re-authenticating...")
+                creds = None
+        if not creds or not creds.valid:
+            flow = InstalledAppFlow.from_client_secrets_file(credentials_path, SCOPES)
+
+            # Use local server flow (OOB was deprecated by Google)
+            # bind_addr 0.0.0.0 allows access from other machines on the network
+            creds = flow.run_local_server(
+                port=8085,
+                bind_addr='0.0.0.0',
+                open_browser=False,
+                prompt='consent',
+                access_type='offline',
+            )
+
+        with open(token_path, 'w') as token:
+            token.write(creds.to_json())
+
+    return creds
+
+
+def get_email_content(service, msg_id):
+    """Fetch email content and headers."""
+    msg = service.users().messages().get(
+        userId='me',
+        id=msg_id,
+        format='full'
+    ).execute()
+
+    headers = {h['name']: h['value'] for h in msg['payload']['headers']}
+
+    html_body = ''
+
+    def extract_html(parts):
+        nonlocal html_body
+        for part in parts:
+            if 'parts' in part:
+                extract_html(part['parts'])
+            elif part.get('mimeType') == 'text/html' and 'data' in part.get('body', {}):
+                html_body = base64.urlsafe_b64decode(part['body']['data']).decode('utf-8')
+
+    if 'parts' in msg['payload']:
+        extract_html(msg['payload']['parts'])
+    elif msg['payload'].get('mimeType') == 'text/html':
+        html_body = base64.urlsafe_b64decode(msg['payload']['body']['data']).decode('utf-8')
+
+    # Generate content hash from text for deduplication
+    soup = BeautifulSoup(html_body, 'html.parser')
+    text = soup.get_text(separator=' ', strip=True)
+
+    return {
+        'id': msg_id,
+        'from': headers.get('From', ''),
+        'subject': headers.get('Subject', ''),
+        'date': headers.get('Date', ''),
+        'html': html_body,
+        'content_hash': content_hash(text)
+    }
+
+
+def _matches_whitelist(from_header: str, whitelist: list) -> bool:
+    """Check if a From header matches any entry in the sender whitelist."""
+    from_lower = from_header.lower()
+    return any(entry.lower() in from_lower for entry in whitelist)
+
+
+def fetch_substack_emails(service, last_history_id=None, query='from:substack.com',
+                          max_results=50, sender_whitelist=None):
+    """Fetch Substack emails using history API for incremental sync."""
+    if sender_whitelist is None:
+        sender_whitelist = ['substack.com']
+
+    messages = []
+
+    profile = service.users().getProfile(userId='me').execute()
+    current_history_id = profile['historyId']
+
+    if last_history_id:
+        try:
+            history = service.users().history().list(
+                userId='me',
+                startHistoryId=last_history_id,
+                historyTypes=['messageAdded']
+            ).execute()
+
+            if 'history' in history:
+                for record in history['history']:
+                    for msg in record.get('messagesAdded', []):
+                        msg_id = msg['message']['id']
+                        meta = service.users().messages().get(
+                            userId='me', id=msg_id, format='metadata',
+                            metadataHeaders=['From']
+                        ).execute()
+                        from_header = next(
+                            (h['value'] for h in meta['payload']['headers'] if h['name'] == 'From'),
+                            ''
+                        )
+                        if _matches_whitelist(from_header, sender_whitelist):
+                            messages.append(msg_id)
+        except Exception as e:
+            logger.warning(f"History fetch failed, falling back to query: {e}")
+            last_history_id = None
+
+    if not last_history_id:
+        results = service.users().messages().list(
+            userId='me',
+            q=query,
+            maxResults=max_results
+        ).execute()
+        messages = [m['id'] for m in results.get('messages', [])]
+
+    return messages, current_history_id
+
+
+def is_duplicate(conn, content_hash_value):
+    """Check if we already have content with this hash."""
+    row = conn.execute(
+        "SELECT id, subject FROM emails WHERE content_hash = ?",
+        (content_hash_value,)
+    ).fetchone()
+    return row
+
+
+def run_fetch(conn, gmail_config=None):
+    """Main fetch function for orchestrator.
+
+    Args:
+        conn: SQLite database connection
+        gmail_config: GmailConfig dataclass (uses defaults if None)
+    """
+    # Read config or use defaults
+    token_path = gmail_config.token_path if gmail_config else 'token.json'
+    credentials_path = gmail_config.credentials_path if gmail_config else 'credentials.json'
+    query = gmail_config.query if gmail_config else 'from:substack.com'
+    max_results = gmail_config.max_results if gmail_config else 50
+
+    cursor = conn.execute("SELECT value FROM sync_state WHERE key = 'history_id'")
+    row = cursor.fetchone()
+    last_id = row[0] if row else None
+
+    creds = get_credentials(token_path=token_path, credentials_path=credentials_path)
+    service = build('gmail', 'v1', credentials=creds)
+
+    sender_whitelist = gmail_config.sender_whitelist if gmail_config and hasattr(gmail_config, 'sender_whitelist') else ['substack.com']
+    msg_ids, current_id = fetch_substack_emails(service, last_id, query=query,
+                                                max_results=max_results,
+                                                sender_whitelist=sender_whitelist)
+
+    new_count = 0
+    dup_count = 0
+
+    for msg_id in msg_ids:
+        # Skip if this message ID already exists
+        if conn.execute("SELECT 1 FROM emails WHERE id = ?", (msg_id,)).fetchone():
+            continue
+
+        email = get_email_content(service, msg_id)
+
+        # Check for content duplicates (different ID but same content)
+        existing = is_duplicate(conn, email['content_hash'])
+        if existing:
+            logger.debug(f"Skipping duplicate of '{existing[1][:40]}...'")
+            dup_count += 1
+            continue
+
+        conn.execute(
+            "INSERT INTO emails (id, subject, sender, date, html, content_hash) VALUES (?, ?, ?, ?, ?, ?)",
+            (msg_id, email['subject'], email['from'], email['date'], email['html'], email['content_hash'])
+        )
+        conn.commit()
+        new_count += 1
+        logger.info(f"Fetched: {email['subject'][:50]}...")
+
+    conn.execute(
+        "INSERT OR REPLACE INTO sync_state (key, value) VALUES ('history_id', ?)",
+        (current_id,)
+    )
+    conn.commit()
+
+    logger.info(f"Fetch done. {new_count} new, {dup_count} duplicates skipped.")
+    return new_count
+
+
+if __name__ == '__main__':
+    from config import load_config
+
+    cfg = load_config()
+    conn = init_db(cfg.database_path)
+    try:
+        run_fetch(conn, cfg.gmail)
+    finally:
+        conn.close()

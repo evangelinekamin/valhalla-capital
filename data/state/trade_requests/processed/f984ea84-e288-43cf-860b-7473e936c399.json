@@ -1,0 +1,15 @@
+{
+  "request_id": "f984ea84-e288-43cf-860b-7473e936c399",
+  "timestamp": "2026-06-09T14:01:54.926781",
+  "ticker": "SU",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 35.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.75
+  },
+  "reasoning": "SU is Canada's largest integrated energy company with direct exposure to oil price increases. With US-Iran conflict escalating at the Strait of Hormuz (20% of global oil supply), oil prices are likely to spike. SU has strong fundamentals: $15.4B Q1 revenue, $2.9B operating income, $2.1B net income, and $4.76B EBITDA. Trading at ~4.8x revenue is reasonable for integrated energy. This positions the portfolio for geopolitical tailwinds while maintaining quality.",
+  "quantity": 1.0,
+  "kelly_fraction": 0.2857142857142857
+}

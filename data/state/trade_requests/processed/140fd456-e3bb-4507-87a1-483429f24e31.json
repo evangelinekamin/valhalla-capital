@@ -1,0 +1,15 @@
+{
+  "request_id": "140fd456-e3bb-4507-87a1-483429f24e31",
+  "timestamp": "2026-05-27T14:01:26.552008",
+  "ticker": "ESTA",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 55.0,
+    "expected_loss_pct": -20.0,
+    "confidence": 0.7
+  },
+  "reasoning": "ESTA represents healthcare diversification with strong Ozempic tailwind catalyst and FDA approval catalyst. Current valuation discount provides attractive risk/reward. Portfolio needs sector diversification beyond energy exposure.",
+  "quantity": 2.0,
+  "kelly_fraction": 0.26136363636363635
+}

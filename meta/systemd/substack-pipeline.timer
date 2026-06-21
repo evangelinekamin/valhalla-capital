@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Substack pipeline periodically
+
+[Timer]
+# Run at 6 AM and 6 PM daily
+OnCalendar=*-*-* 06,18:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

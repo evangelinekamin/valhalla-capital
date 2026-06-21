@@ -1,0 +1,10 @@
+valhalla/overseer:latest	2.02GB
+valhalla/trading-service:latest	928MB
+valhalla/scraper:latest	673MB
+valhalla/fmp-api:latest	713MB
+ghcr.io/gnzsnz/ib-gateway:stable	1.35GB
+timescale/timescaledb:latest-pg15	2.08GB
+mysql:8.0	1.1GB
+postgres:16-alpine	395MB
+pgvector/pgvector:pg15	612MB
+miniflux/miniflux:2.2.5	44.7MB

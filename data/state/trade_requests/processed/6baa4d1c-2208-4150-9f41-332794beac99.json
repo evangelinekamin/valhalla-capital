@@ -1,0 +1,14 @@
+{
+  "request_id": "6baa4d1c-2208-4150-9f41-332794beac99",
+  "timestamp": "2026-05-06T14:02:03.132761",
+  "ticker": "TBPH",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -0.01,
+    "confidence": 0.9
+  },
+  "reasoning": "TBPH is a small stub position without clear catalyst. Exit to free capital for higher-conviction opportunities like GPN that can improve benchmark performance.",
+  "quantity": 4.0
+}

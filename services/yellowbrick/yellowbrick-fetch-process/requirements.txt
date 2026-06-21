@@ -1,0 +1,17 @@
+# Yellowbrick Scraper Dependencies
+
+# Core
+requests>=2.31.0
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# Database
+# SQLite is built-in, no additional package needed
+
+# Browser automation
+playwright>=1.40.0
+
+# Development/Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0

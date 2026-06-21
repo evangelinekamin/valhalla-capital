@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+.DS_Store
+# defensive: never commit live secrets if the tree is rebuilt
+.env
+*.pem
+id_ed25519

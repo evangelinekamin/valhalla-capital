@@ -1,0 +1,14 @@
+{
+  "request_id": "9d6f46a5-da46-45e6-bc23-90e3434b1e04",
+  "timestamp": "2026-06-03T14:02:13.374113",
+  "ticker": "ROCK",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.55,
+    "expected_gain_pct": 20.0,
+    "expected_loss_pct": -12.0,
+    "confidence": 0.6
+  },
+  "reasoning": "ROCK requires thesis review and position size adjustment. Currently at 3.9% of portfolio (below 5% minimum), it's a stub position that doesn't justify monitoring cost. The $39.81 entry price is above current $37.98 price (-4.7% decline), but with strong insider buying ($1.56M by 4 insiders) and Substack $100 target (2.5x upside), the thesis remains intact. Selling 1 share reduces the position to 2 shares while maintaining exposure to the solar construction thesis.",
+  "quantity": 1.0
+}

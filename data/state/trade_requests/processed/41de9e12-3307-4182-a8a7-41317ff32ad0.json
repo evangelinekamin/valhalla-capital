@@ -1,0 +1,14 @@
+{
+  "request_id": "41de9e12-3307-4182-a8a7-41317ff32ad0",
+  "timestamp": "2026-05-06T14:00:57.591343",
+  "ticker": "BMI",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -0.01,
+    "confidence": 0.95
+  },
+  "reasoning": "BMI concentration risk requires immediate action. Current position at 23.3% exceeds 20% maximum limit. Trim to 15% target to maintain portfolio health and risk management discipline.",
+  "quantity": 1.0
+}

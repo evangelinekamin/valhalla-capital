@@ -1,0 +1,15 @@
+{
+  "request_id": "66ffdd99-5d19-4a1e-a845-82b8586d8bfb",
+  "timestamp": "2026-06-03T14:01:07.574894",
+  "ticker": "GRNT",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.7
+  },
+  "reasoning": "GRNT presents a high-conviction energy opportunity aligned with current US-Iran geopolitical tensions. With $919K insider buying by 6 insiders at $5.36, the stock is currently trading at $4.995 (6.8% below insider purchase price), creating an attractive entry point. The company operates in oil & gas exploration with exposure to potential oil price premiums from Middle East tensions. GRNT has a low beta (0.228) and strong insider conviction, making it a defensive energy play with asymmetric upside.",
+  "quantity": 20.0,
+  "kelly_fraction": 0.255
+}

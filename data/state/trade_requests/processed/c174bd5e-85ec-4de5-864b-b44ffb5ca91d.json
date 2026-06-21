@@ -1,0 +1,15 @@
+{
+  "request_id": "c174bd5e-85ec-4de5-864b-b44ffb5ca91d",
+  "timestamp": "2026-05-19T14:03:25.999394",
+  "ticker": "OBE",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 30.0,
+    "expected_loss_pct": -25.0,
+    "confidence": 0.8
+  },
+  "reasoning": "OBE is a Canadian oil producer benefiting from Substack's bullish summer travel demand thesis and current geopolitical energy supply disruption. With oil at $110/barrel and Hormuz closure, OBE has strong EBITDA ($55.8M in Q1 2026) and is positioned to benefit from summer travel-related demand.",
+  "quantity": 7.0,
+  "kelly_fraction": 0.17916666666666667
+}

@@ -1,0 +1,15 @@
+{
+  "request_id": "e4c6c5d9-8b78-4085-b017-1f3515ab51d4",
+  "timestamp": "2026-06-15T14:02:47.739079",
+  "ticker": "BETR",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -12.0,
+    "confidence": 0.8
+  },
+  "reasoning": "BETR has massive insider buying ($8.4M by 5 insiders) at $29.46, and is currently trading at $29.89, showing strong insider confidence. The stock is up 12.75% today, indicating positive market sentiment. A 5-share position ($149.45) keeps commission drag at 1.34%, well within our 5% threshold.",
+  "quantity": 5.0,
+  "kelly_fraction": 0.27799999999999997
+}

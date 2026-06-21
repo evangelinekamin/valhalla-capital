@@ -1,0 +1,90 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmp-data-client"
+version = "0.1.0"
+description = "Comprehensive Python library for Financial Modeling Prep (FMP) API with caching, LLM summarization, and institutional analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    "aiohttp>=3.9.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "mysql-connector-python>=8.0.0",
+    "anthropic>=0.18.0",
+    "tenacity>=8.2.0",
+    "python-dateutil>=2.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "aioresponses>=0.7.6",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.5.0",
+]
+server = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+]
+cli = [
+    "click>=8.1.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+fmp = "fmp_data_client.cli.main:cli"
+
+[project.urls]
+Homepage = "https://github.com/evangelinekamin/FMP-Access-Library"
+Documentation = "https://github.com/evangelinekamin/FMP-Access-Library#readme"
+Repository = "https://github.com/evangelinekamin/FMP-Access-Library"
+Issues = "https://github.com/evangelinekamin/FMP-Access-Library/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fmp_data_client*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=fmp_data_client --cov-report=term-missing"

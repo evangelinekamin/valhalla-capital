@@ -1,0 +1,15 @@
+{
+  "request_id": "ae1eb1ea-d1a2-40a3-ab76-9d9cd4719378",
+  "timestamp": "2026-05-01T14:01:22.033780",
+  "ticker": "BMI",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 18.5,
+    "expected_loss_pct": -13.5,
+    "confidence": 0.85
+  },
+  "reasoning": "BMI is trading at a 10% discount to insider purchase price ($122.37 vs $136+), with strong Q1 2026 fundamentals (10.4% revenue growth, 7.2% net income growth). The company benefits from secular trends in water infrastructure modernization and smart metering adoption. Current position is 11.8% of portfolio, and adding 1 more share would bring it to ~16.5%, which is acceptable given the HIGH conviction level and strong insider alignment. The target price is $145.00, providing 18.5% upside.",
+  "quantity": 1.0,
+  "kelly_fraction": 0.37027027027027026
+}

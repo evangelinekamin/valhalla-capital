@@ -1,0 +1,23 @@
+[Unit]
+Description=Substack Newsletter Processing Pipeline
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/substack-fetch-process
+ExecStart=/opt/substack-fetch-process/venv/bin/python orchestrate.py --stage all
+EnvironmentFile=/opt/substack-fetch-process/.env
+User=pipeline
+Group=pipeline
+
+# Graceful shutdown -- sends SIGTERM, waits 30s before SIGKILL
+TimeoutStopSec=30
+KillSignal=SIGTERM
+
+# Logging (stdout/stderr captured by journald)
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=substack-pipeline
+
+[Install]
+WantedBy=multi-user.target

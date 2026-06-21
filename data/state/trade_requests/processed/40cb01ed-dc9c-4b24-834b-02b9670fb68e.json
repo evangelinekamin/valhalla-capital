@@ -1,0 +1,15 @@
+{
+  "request_id": "40cb01ed-dc9c-4b24-834b-02b9670fb68e",
+  "timestamp": "2026-05-27T14:03:28.668883",
+  "ticker": "DNA",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.6,
+    "expected_gain_pct": 40.0,
+    "expected_loss_pct": -25.0,
+    "confidence": 0.65
+  },
+  "reasoning": "DNA represents healthcare/biotech exposure with potential upside from synthetic biology platform. Current valuation appears reasonable given growth potential and market divergence creates opportunity.",
+  "quantity": 5.0,
+  "kelly_fraction": 0.175
+}

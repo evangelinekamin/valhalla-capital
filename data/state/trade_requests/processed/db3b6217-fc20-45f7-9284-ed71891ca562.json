@@ -1,0 +1,14 @@
+{
+  "request_id": "db3b6217-fc20-45f7-9284-ed71891ca562",
+  "timestamp": "2026-05-18T14:02:40.310133",
+  "ticker": "DMLP",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.8
+  },
+  "reasoning": "DMLP represents 19.1% of portfolio, approaching our 20% maximum position size. Given the binary outcome risk from UK military mission to stabilize Hormuz shipping (which could reduce oil premium), trimming this position reduces concentration risk while maintaining oil leverage exposure. The thesis remains valid but the position size is excessive.",
+  "quantity": 7.0
+}

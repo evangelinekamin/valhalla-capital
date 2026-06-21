@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+coverage.xml
+*.cover
+
+# Documentation build
+docs/_build/
+site/
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Development files
+*.md
+!README.md
+!DOCKER.md
+.env.example
+.env.local
+.env.development
+*.log
+
+# Examples and tests (optional - uncomment to exclude)
+# tests/
+# examples/
+
+# Session files
+SESSION_SUMMARY.md
+FILES_CREATED_THIS_SESSION.md
+IMPLEMENTATION_STATUS*.md
+COMPLETION_SUMMARY.md
+QUICKSTART.md
+CHANGELOG.md
+REST_API_IMPLEMENTATION_SUMMARY.md

@@ -1,0 +1,14 @@
+{
+  "request_id": "53343410-5107-4ed3-a179-6365d9fb65c1",
+  "timestamp": "2026-05-14T14:00:48.537229",
+  "ticker": "GPN",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -2.0,
+    "confidence": 0.9
+  },
+  "reasoning": "GPN concentration exceeds 20% maximum (currently 20.35% of portfolio). Trim to reduce concentration risk and bring position to ~15% target size. This is pure risk management with no thesis change - the value thesis remains intact.",
+  "quantity": 1.0
+}

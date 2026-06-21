@@ -1,0 +1,84 @@
+{# System pulse #}
+{% if summary.pulse %}
+<div class="system-pulse {% if not summary.all_healthy %}system-pulse--alert{% endif %}">
+    <span class="system-pulse__icon">{% if summary.all_healthy %}&#9656;{% else %}&#9888;{% endif %}</span>
+    <span class="system-pulse__text">{{ summary.pulse }}</span>
+</div>
+{% endif %}
+
+{# Summary bar #}
+<div class="summary">
+    <div class="summary__item">
+        <span class="summary__count summary__count--served">{{ summary.served }}</span>
+        <span class="summary__label">Served</span>
+    </div>
+    <div class="summary__item">
+        <span class="summary__count summary__count--mixing">{{ summary.mixing }}</span>
+        <span class="summary__label">Mixing</span>
+    </div>
+    <div class="summary__item">
+        <span class="summary__count summary__count--down">{{ summary.down }}</span>
+        <span class="summary__label">86'd</span>
+    </div>
+    <div class="summary__item">
+        <span class="summary__count summary__count--unknown">{{ summary.unknown }}</span>
+        <span class="summary__label">On Order</span>
+    </div>
+    <div style="flex-grow: 1;"></div>
+    {% if config.allow_manual_checks %}
+    <button class="btn-check"
+            hx-post="/api/check-now"
+            hx-target="#status-board"
+            hx-indicator="#check-indicator">
+        <span id="check-indicator" class="htmx-indicator">◌</span>
+        Check Now
+    </button>
+    {% endif %}
+</div>
+
+{# Column headers #}
+<div class="col-headers">
+    <span></span>
+    <span></span>
+    <span>Status</span>
+    <span>Latency</span>
+    <span>History</span>
+    <span>Uptime 24h</span>
+    <span>Checked</span>
+</div>
+
+{# Service groups #}
+{% for group_key, group in groups %}
+<section class="group">
+    <h2 class="group__label">{{ group.label }}</h2>
+
+    {% for svc in group.services %}
+    <div class="service {{ status_class(svc.status) }}">
+        <div class="service__pip"></div>
+        <div class="service__info">
+            <div class="service__name">{{ svc.def.name }}</div>
+            <div class="service__desc">{{ svc.def.description }}</div>
+        </div>
+        <div class="service__status">{{ svc.status }}</div>
+        <div class="service__latency">{{ format_ms(svc.response_ms) }}</div>
+        <div class="service__sparkline">
+            <svg class="sparkline" width="80" height="20" viewBox="0 0 80 20">
+                <polyline points="{{ svc.response_history | sparkline }}" />
+            </svg>
+        </div>
+        <div class="service__uptime">
+            {% if svc.uptime_24h >= 0 %}
+                {{ "%.1f"|format(svc.uptime_24h) }}%
+            {% else %}
+                —
+            {% endif %}
+        </div>
+        <div class="service__checked">{{ time_ago(svc.checked_at) }}</div>
+
+        {% if svc.error and svc.status != "On Order" %}
+        <div class="service__error">{{ svc.error }}</div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</section>
+{% endfor %}

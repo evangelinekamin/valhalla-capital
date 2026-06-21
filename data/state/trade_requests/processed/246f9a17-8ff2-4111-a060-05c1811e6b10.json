@@ -1,0 +1,15 @@
+{
+  "request_id": "246f9a17-8ff2-4111-a060-05c1811e6b10",
+  "timestamp": "2026-05-19T14:04:19.573970",
+  "ticker": "PEW",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 50.0,
+    "expected_loss_pct": -20.0,
+    "confidence": 0.85
+  },
+  "reasoning": "PEW trades at a 20% discount to cash ($2.89 vs $3.51 cash/share) with strong growth potential. The company is transitioning from losses to profitability, with revenue growing from $22.3M to $25.9M sequentially. Management is executing on growth initiatives including PEW Logistics for D2C fulfillment and targeting 3-4% market penetration of the $9B US firearms market.",
+  "quantity": 67.0,
+  "kelly_fraction": 0.29
+}

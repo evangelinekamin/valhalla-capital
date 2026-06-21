@@ -1,0 +1,15 @@
+{
+  "request_id": "e47ab52f-268b-42db-9d42-31a6638b657c",
+  "timestamp": "2026-05-20T14:03:05.670870",
+  "ticker": "DMLP",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 30.0,
+    "expected_loss_pct": -12.0,
+    "confidence": 0.9
+  },
+  "reasoning": "DMLP is a zero-capex oil/gas royalty LP with $129.7M TTM FCF, net cash position, and direct upside leverage to oil prices. The Hormuz closure from the Iran war is a structural supply disruption that elevates WTI well above the $55 falsification floor. Every $10/bbl oil increase adds ~$13M annual FCF. With oil at $110/barrel and ongoing geopolitical tensions, this represents a high-conviction oil leverage opportunity.",
+  "quantity": 5.0,
+  "kelly_fraction": 0.325
+}

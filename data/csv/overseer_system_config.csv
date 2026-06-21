@@ -1,0 +1,12 @@
+key,value,updated_at
+trading_mode,"""paper""",2026-02-13 22:45:23.148905+00
+max_position_pct,0.25,2026-02-13 22:45:23.148905+00
+max_daily_trades,10,2026-02-13 22:45:23.148905+00
+max_weekly_trades,30,2026-02-13 22:45:23.148905+00
+daily_loss_halt_pct,0.03,2026-02-13 22:45:23.148905+00
+commission_per_share,0.005,2026-02-13 22:45:23.148905+00
+min_commission,1.00,2026-02-13 22:45:23.148905+00
+embedding_model,"""all-MiniLM-L6-v2""",2026-02-13 22:45:23.148905+00
+embedding_dim,384,2026-02-13 22:45:23.148905+00
+min_position_value,25,2026-02-13 22:45:23.148905+00
+max_commission_drag_pct,0.05,2026-02-13 22:45:23.148905+00

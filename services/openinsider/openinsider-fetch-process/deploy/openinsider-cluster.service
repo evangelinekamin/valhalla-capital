@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenInsider cluster buys scraper (Phase 1)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=scraper
+Group=scraper
+WorkingDirectory=/opt/trading/openinsider-fetch-process
+ExecStart=/opt/trading/openinsider-fetch-process/venv/bin/python run_scraper.py
+EnvironmentFile=/opt/trading/openinsider-fetch-process/.env
+StandardOutput=journal
+StandardError=journal
+
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/trading/openinsider-fetch-process/data /opt/trading/openinsider-fetch-process/logs
+PrivateTmp=true

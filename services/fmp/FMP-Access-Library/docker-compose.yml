@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # MySQL Database for caching
+  mysql:
+    image: mysql:8.0
+    container_name: fmp-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - fmp-network
+
+  # FMP Data Client API Server
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fmp-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      # Override with docker service names
+      MYSQL_HOST: mysql
+      API_HOST: 0.0.0.0
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - fmp-network
+    # Uncomment to mount source code for development:
+    # volumes:
+    #   - ./fmp_data_client:/app/fmp_data_client:ro
+
+volumes:
+  mysql_data:
+    driver: local
+
+networks:
+  fmp-network:
+    driver: bridge

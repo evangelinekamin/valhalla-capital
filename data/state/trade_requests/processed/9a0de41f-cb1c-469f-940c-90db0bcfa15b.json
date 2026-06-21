@@ -1,0 +1,15 @@
+{
+  "request_id": "9a0de41f-cb1c-469f-940c-90db0bcfa15b",
+  "timestamp": "2026-05-01T14:01:41.092402",
+  "ticker": "SU",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.75,
+    "expected_gain_pct": 15.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.75
+  },
+  "reasoning": "SU is a stable, large-cap integrated oil company benefiting from structural oil market changes (UAE OPEC exit, Hormuz blockade). With Q4 2025 net income $1.48B and EPS $1.23, SU has consistent earnings and a solid dividend yield (~2.5%). Adding SU provides diversified oil exposure that complements the existing DMLP position and addresses the TOP PRIORITY oil sector analysis need.",
+  "quantity": 2.0,
+  "kelly_fraction": 0.2916666666666667
+}

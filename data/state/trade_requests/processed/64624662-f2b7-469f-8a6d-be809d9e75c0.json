@@ -1,0 +1,14 @@
+{
+  "request_id": "64624662-f2b7-469f-8a6d-be809d9e75c0",
+  "timestamp": "2026-05-15T14:01:37.560014",
+  "ticker": "BUR",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.65,
+    "expected_gain_pct": 0.01,
+    "expected_loss_pct": -5.0,
+    "confidence": 0.7
+  },
+  "reasoning": "Trimming BUR to reduce concentration risk from 19.9% to ~15% of portfolio. BUR has shown earnings volatility (Q4 2025 $37.5M loss vs Q2 2025 $88.3M profit) and is approaching our 20% position limit. This is risk management, not thesis invalidation.",
+  "quantity": 10.0
+}

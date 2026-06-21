@@ -1,0 +1,14 @@
+{
+  "request_id": "deed5e28-dcf9-4950-bd6a-3933af332d17",
+  "timestamp": "2026-05-05T14:01:08.887649",
+  "ticker": "BMI",
+  "action": "SELL",
+  "analysis": {
+    "win_probability": 0.7,
+    "expected_gain_pct": 15.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.85
+  },
+  "reasoning": "BMI concentration risk requires immediate reduction from 23.4% to 11.7% of portfolio. Insider purchase price support at $136+ provides margin of safety, but position size violates risk limits.",
+  "quantity": 1.0
+}

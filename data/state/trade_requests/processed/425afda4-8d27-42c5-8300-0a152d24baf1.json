@@ -1,0 +1,15 @@
+{
+  "request_id": "425afda4-8d27-42c5-8300-0a152d24baf1",
+  "timestamp": "2026-05-20T14:01:48.906447",
+  "ticker": "RILY",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.8,
+    "expected_gain_pct": 20.0,
+    "expected_loss_pct": -10.0,
+    "confidence": 0.95
+  },
+  "reasoning": "RILY is our strongest performer (+21.9% vs portfolio) with exceptional Q1 2026 results: $450.6M revenue, $253.6M operating income, and $213.3M net income. The company is executing exceptionally well on its business model and represents a high-quality growth opportunity. Adding to this position increases our exposure to a proven winner while deploying cash to address the portfolio's -10.31% alpha underperformance.",
+  "quantity": 10.0,
+  "kelly_fraction": 0.35
+}

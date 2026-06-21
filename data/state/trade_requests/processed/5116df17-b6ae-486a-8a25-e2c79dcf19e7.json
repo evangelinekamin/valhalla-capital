@@ -1,0 +1,15 @@
+{
+  "request_id": "5116df17-b6ae-486a-8a25-e2c79dcf19e7",
+  "timestamp": "2026-05-05T14:03:33.855424",
+  "ticker": "SU",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 25.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.9
+  },
+  "reasoning": "SU is direct beneficiary of Strait of Hormuz blockade. Brent crude trading at $114-126 range creates significant upside. Current position at 13.3% is appropriate and adding 1 share brings it to 19.9% (under 25% limit), providing additional exposure to oil crisis.",
+  "quantity": 1.0,
+  "kelly_fraction": 0.38
+}

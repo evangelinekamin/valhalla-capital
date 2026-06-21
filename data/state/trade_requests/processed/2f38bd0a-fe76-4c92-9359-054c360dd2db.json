@@ -1,0 +1,15 @@
+{
+  "request_id": "2f38bd0a-fe76-4c92-9359-054c360dd2db",
+  "timestamp": "2026-05-20T14:02:52.081624",
+  "ticker": "PEW",
+  "action": "BUY",
+  "analysis": {
+    "win_probability": 0.85,
+    "expected_gain_pct": 35.0,
+    "expected_loss_pct": -15.0,
+    "confidence": 0.95
+  },
+  "reasoning": "PEW trades at $2.73/share with $3.51 cash per share (20% discount to cash), $106.4M cash, $29.7M debt, and solid growth (25.9M revenue in Q1 2026). This represents an exceptional net-net value opportunity with built-in downside protection. The company is well-positioned in the firearms retail sector with growing revenue and strong cash flow.",
+  "quantity": 60.0,
+  "kelly_fraction": 0.39285714285714285
+}
