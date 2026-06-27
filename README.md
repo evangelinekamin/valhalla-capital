@@ -140,7 +140,7 @@ The six cycle types Valkyrie ran on:
 - weekly_review (Sat)
 - monthly_review (1st)
 
-Pre-Apr-5, each ran a Claude model by weight; post-swap, deepseek handled quick_check and data_synthesis, qwen-plus handled deep_analysis, and grok handled the reviews.
+Pre-Apr-5, each ran a Claude model by weight; post-swap, deepseek handled quick_check and data_synthesis, qwen-plus handled deep_analysis, and grok handled the reviews. (this was decided after a model gauntlet which could be its own seperate writeup. this made me start to realize the value of oss models though)
 
 One thread to close from the architecture overview: that second model on the broker side. It produced 97 buy/sell calls with win-probability 0.20 to 0.95 (mean 0.72) and confidence 0.50 to 0.97, but it had no abstain or veto. Its decision was always BUY or SELL, and with the risk layer approving 776 of 776 checks, nothing in the record shows a low-probability call ever stopping a trade. The promised independent second opinion was one more advisory number, not a gate. (So I invented a consulting firm, just for cheaper.)
 
